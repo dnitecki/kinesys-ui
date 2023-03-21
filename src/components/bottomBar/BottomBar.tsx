@@ -11,7 +11,14 @@ export default function LabelBottomNavigation() {
 
   return (
     <Paper
-      sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+      sx={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        display: { sm: "none", xs: "flex" },
+        justifyContent: "center",
+      }}
       elevation={3}
     >
       <BottomNavigation

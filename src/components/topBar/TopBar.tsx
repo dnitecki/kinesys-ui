@@ -116,16 +116,23 @@ export default function MiniDrawer() {
             sx={{
               marginRight: 5,
               ...(open && { display: "none" }),
+              display: { sm: "flex", xs: "none" },
             }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h5" noWrap component="div">
-            KINESYS
+            KINESYS-UI
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer
+        variant="permanent"
+        open={open}
+        sx={{
+          display: { sm: "flex", xs: "none" },
+        }}
+      >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (

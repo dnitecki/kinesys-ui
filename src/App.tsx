@@ -13,13 +13,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className="app">
           <div className="app-container">
-            <TopBar />
-            <BottomBar />
-            <div className="app-content-main">
-              <Routes>
-                <Route path="/" element={<OverviewDashboard />} />
-              </Routes>
-            </div>
+            <Routes>
+              <Route path="/" element={<OverviewDashboard />} />
+            </Routes>
           </div>
         </div>
       </ThemeProvider>
