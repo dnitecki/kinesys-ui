@@ -3,16 +3,18 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import OverviewDashboard from "./pages/overviewDashboard/OverviewDashboard";
 import TopBar from "./components/topBar/TopBar";
-import SideBar from "./components/sideBar/SideBar";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./utils/themes/theme";
+import BottomBar from "./components/bottomBar/BottomBar";
 
 function App() {
   return (
     <>
-      <div className="app">
-        <div className="app-container">
-          <TopBar />
-          <div className="app-content">
-            <SideBar />
+      <ThemeProvider theme={theme}>
+        <div className="app">
+          <div className="app-container">
+            <TopBar />
+            <BottomBar />
             <div className="app-content-main">
               <Routes>
                 <Route path="/" element={<OverviewDashboard />} />
@@ -20,7 +22,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </ThemeProvider>
     </>
   );
 }
