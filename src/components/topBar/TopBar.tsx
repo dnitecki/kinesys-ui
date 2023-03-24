@@ -368,7 +368,7 @@ export default function MiniDrawer() {
             </ListItem>
           ))}
         </List>
-        <Divider />
+
         <List
           sx={{
             display: "flex",
@@ -377,6 +377,7 @@ export default function MiniDrawer() {
             justifyContent: "flex-end",
           }}
         >
+          <Divider />
           {subMenu.map((item, index) => (
             <ListItem key={index} disablePadding sx={{ display: "block" }}>
               <ListItemButton
