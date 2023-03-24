@@ -1,10 +1,8 @@
 import * as React from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ArchiveIcon from "@mui/icons-material/Archive";
 import Paper from "@mui/material/Paper";
+import { menuItems } from "../topBar/menuItems";
 
 export default function LabelBottomNavigation() {
   const [value, setValue] = React.useState("recents");
@@ -28,9 +26,13 @@ export default function LabelBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+        {menuItems.map((item, index) => (
+          <BottomNavigationAction
+            key={index}
+            label={item.text}
+            icon={<item.icon />}
+          />
+        ))}
       </BottomNavigation>
     </Paper>
   );
