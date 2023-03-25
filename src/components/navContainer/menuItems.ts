@@ -10,12 +10,12 @@ export const menuItems: MenuItem[] = [
   {
     text: "Home",
     icon: HomeIcon,
-    url: "",
+    url: "home",
   },
   {
     text: "Dashboard",
     icon: DashboardIcon,
-    url: "",
+    url: "dashboard",
   },
   {
     text: "Performance",

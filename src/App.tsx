@@ -1,9 +1,9 @@
 import "./App.scss";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import OverviewDashboard from "./pages/overviewDashboard/OverviewDashboard";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./utils/themes/theme";
+import NavContainer from "./components/navContainer/NavContainer";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <div className="app">
           <div className="app-container">
             <Routes>
-              <Route path="/" element={<OverviewDashboard />} />
+              <Route path="/*" element={<NavContainer />} />
             </Routes>
           </div>
         </div>
