@@ -17,7 +17,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
@@ -25,6 +24,8 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useState } from "react";
 import { alpha, Badge, InputBase, Menu, MenuItem } from "@mui/material";
 import { menuItems, subMenu } from "./menuItems";
+import { Route, Routes } from "react-router-dom";
+import Home from "../../pages/home/Home";
 
 const drawerWidth = 240;
 
@@ -137,7 +138,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function MiniDrawer() {
+export default function DashboardContainer() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -415,6 +416,9 @@ export default function MiniDrawer() {
         }}
       >
         <DrawerHeader />
+        <Routes>
+          <Route path="" element={<Home />} />
+        </Routes>
       </Box>
     </Box>
   );
