@@ -28,6 +28,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Home from "../../pages/home/Home";
 import BottomBar from "../bottomBar/BottomBar";
 import OverviewDashboard from "../../pages/overviewDashboard/OverviewDashboard";
+import { JsxElement } from "typescript";
 
 const drawerWidth = 240;
 
@@ -140,7 +141,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function NavContainer() {
+export default function NavContainer(AppRouter: JSX.Element[]) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -421,10 +422,7 @@ export default function NavContainer() {
           }}
         >
           <DrawerHeader />
-          <Routes>
-            <Route path="home" element={<Home />} />
-            <Route path="dashboard" element={<OverviewDashboard />} />
-          </Routes>
+          <div> {AppRouter}</div>
         </Box>
       </Box>
       <BottomBar />
