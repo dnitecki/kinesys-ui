@@ -24,11 +24,9 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useState } from "react";
 import { alpha, Badge, InputBase, Menu, MenuItem } from "@mui/material";
 import { menuItems, subMenu } from "./menuItems";
-import { Link, Route, Routes } from "react-router-dom";
-import Home from "../../pages/home/Home";
+import { Link } from "react-router-dom";
 import BottomBar from "../bottomBar/BottomBar";
-import OverviewDashboard from "../../pages/overviewDashboard/OverviewDashboard";
-import { JsxElement } from "typescript";
+import AppRouter from "../appRouter/AppRouter";
 
 const drawerWidth = 240;
 
@@ -141,7 +139,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function NavContainer(AppRouter: JSX.Element[]) {
+export default function NavContainer() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -422,7 +420,7 @@ export default function NavContainer(AppRouter: JSX.Element[]) {
           }}
         >
           <DrawerHeader />
-          <div> {AppRouter}</div>
+          <AppRouter />
         </Box>
       </Box>
       <BottomBar />
