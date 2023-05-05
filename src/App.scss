@@ -53,3 +53,13 @@ html {
   // other
   --shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
 }
+button {
+  all: unset;
+  cursor: pointer;
+}
+li {
+  all: unset;
+}
+li a {
+  all: unset;
+}

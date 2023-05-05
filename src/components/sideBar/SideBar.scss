@@ -14,3 +14,28 @@
   height: 100%;
   width: 100%;
 }
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.sidebar-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-button {
+  display: flex;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar-item-icon {
+  display: flex;
+  color: #4d4d4d;
+}
