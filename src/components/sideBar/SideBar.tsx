@@ -22,12 +22,14 @@ export default function SideBar() {
                   width: "auto",
                   alignContent: "center",
                   justifyContent: "center",
+                  color: "#4D4D4D",
                 }}
               >
                 <ListItemIcon
                   sx={{
                     minWidth: 0,
                     justifyContent: "center",
+                    color: "#4D4D4D",
                   }}
                 >
                   {<item.icon />}
