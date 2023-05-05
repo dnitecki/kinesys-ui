@@ -4,4 +4,13 @@
   width: 80px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.sidebar-icon-container {
+  display: flex;
+  padding: 1rem;
+}
+.sidebar-icon {
+  height: 100%;
+  width: 100%;
 }
