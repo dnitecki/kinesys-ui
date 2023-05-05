@@ -4,3 +4,10 @@
   height: 80px;
   display: flex;
 }
+.topbar-cluster-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
