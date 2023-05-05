@@ -3,6 +3,11 @@ import "./TopBar.scss";
 import Avatar from "@mui/material/Avatar";
 import { stringAvatar } from "../../utils/helpers/helperFunctions";
 
+const user = {
+  name: "Dominick Nitecki",
+  role: "CEO",
+};
+
 export default function TopBar() {
   return (
     <>
@@ -12,7 +17,11 @@ export default function TopBar() {
           <div className="topbar-role"></div>
           <div className="topbar-notifications"></div>
           <div className="topbar-user">
-            <Avatar {...stringAvatar("Dominick Nitecki")} />
+            <Avatar {...stringAvatar(user.name)} />
+            <div className="topbar-user-text">
+              <p>{user.name}</p>
+              <p>{user.role}</p>
+            </div>
           </div>
         </div>
       </header>
