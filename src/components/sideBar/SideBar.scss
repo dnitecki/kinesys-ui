@@ -33,9 +33,29 @@
   padding: 1rem 0 1rem 0;
   width: 100%;
   justify-content: center;
+  border-right: transparent 3px solid;
   cursor: pointer;
+}
+.sidebar-button:hover {
+  background-color: #f3a12531;
+  .sidebar-item-icon {
+    color: #f3a225;
+  }
 }
 .sidebar-item-icon {
   display: flex;
   color: #4d4d4d;
+}
+
+.sidebar-button-active {
+  background-color: #f3a12531;
+  display: flex;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  justify-content: center;
+  border-right: #f3a225 3px solid;
+  cursor: pointer;
+  .sidebar-item-icon {
+    color: #f3a225;
+  }
 }
