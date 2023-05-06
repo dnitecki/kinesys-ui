@@ -15,7 +15,7 @@ export default function AppRouter() {
         <Route path="teams" element={<Teams />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="tasks" element={<Tasks />} />
-        <Route path="*" element={<Navigate to="dashboard" replace={true} />} />
+        <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
       </Routes>
     </>
   );
