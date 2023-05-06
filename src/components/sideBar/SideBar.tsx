@@ -23,6 +23,7 @@ export default function SideBar() {
                 <div className="sidebar-item-icon">
                   {<item.icon sx={{ fontSize: 30 }} />}
                 </div>
+                <div className="item-tooltip">{item.text}</div>
               </NavLink>
             </li>
           ))}
