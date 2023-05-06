@@ -6,6 +6,7 @@
 }
 .topbar-cluster-container {
   display: flex;
+  column-gap: 3rem;
   align-items: center;
   width: 100%;
   justify-content: flex-end;
@@ -16,6 +17,7 @@
   column-gap: 1rem;
   align-items: center;
   color: #ffffff;
+  cursor: pointer;
 }
 .topbar-user-text {
   display: flex;
@@ -25,4 +27,19 @@
 .topbar-user-text p {
   font-size: 16px;
   margin: 0;
+}
+.topbar-notifications {
+  display: flex;
+}
+.topbar-notifications button {
+  color: #ffffff;
+}
+
+.topbar-role {
+  display: flex;
+}
+
+.topbar-role p {
+  font-size: 16px;
+  color: #ffffff;
 }
