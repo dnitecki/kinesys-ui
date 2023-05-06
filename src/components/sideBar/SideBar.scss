@@ -28,26 +28,32 @@
   align-items: center;
   justify-content: center;
 }
-.sidebar-item .item-tooltip {
+.sidebar-button .item-tooltip {
   width: 120px;
+  visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   text-align: center;
+  font-weight: 400;
   border-radius: 5px;
   padding: 5px 0;
   opacity: 0;
-  transition: all 0.2s ease-in-out;
-  pointer-events: none;
+  transition: all 0.1s ease-in-out;
   position: absolute;
   z-index: 1;
   top: 15px;
-  left: 100%;
+  left: 115%;
+  transform: scale(0.6);
 }
-.sidebar-item:hover {
-  .item-tooltip {
-    opacity: 1;
-    left: 110%;
-  }
+.sidebar-button .item-tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
 }
 .sidebar-button {
   display: flex;
@@ -66,9 +72,12 @@
   width: 100%;
   justify-content: center;
   border-right: #f3a225 3px solid;
-  cursor: pointer;
   .sidebar-item-icon {
     color: #f3a225;
+  }
+  .item-tooltip {
+    visibility: hidden;
+    display: none;
   }
 }
 
@@ -76,6 +85,11 @@
   background-color: #f3a12531;
   .sidebar-item-icon {
     color: #f3a225;
+  }
+  .item-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
   }
 }
 .sidebar-item-icon {
