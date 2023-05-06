@@ -9,7 +9,7 @@
   width: 35rem;
   color: black;
 }
-::placeholder {
+.search-container input::placeholder {
   color: black;
   opacity: 1;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideBar.scss";
 import { NavLink } from "react-router-dom";
-import { menuItems } from "./menuItems";
+import { menuItems, subMenu } from "./menuItems";
 import KinesysIcon from "../../icons/KinesysIcon.svg";
 
 export default function SideBar() {
@@ -20,6 +20,18 @@ export default function SideBar() {
                 }
                 to={item.url}
               >
+                <div className="sidebar-item-icon">
+                  {<item.icon sx={{ fontSize: 30 }} />}
+                </div>
+                <div className="item-tooltip">{item.text}</div>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <ul className="sidebar-list sidebar-bottom">
+          {subMenu.map((item, index) => (
+            <li className="sidebar-item" key={index}>
+              <NavLink className="sidebar-button" to={item.url}>
                 <div className="sidebar-item-icon">
                   {<item.icon sx={{ fontSize: 30 }} />}
                 </div>
