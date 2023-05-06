@@ -16,10 +16,11 @@ export default function TopBar() {
   return (
     <>
       <header className="topbar-container">
+        <div className="topbar-left"></div>
+        <div className="topbar-search">
+          <SearchBar />
+        </div>
         <div className="topbar-cluster-container">
-          <div className="topbar-search">
-            <SearchBar />
-          </div>
           <div className="topbar-notifications">
             <button>
               <Badge badgeContent={7} color="error">
