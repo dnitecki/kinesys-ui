@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Market() {
-  return <div>Market</div>;
+  return <div className="center-div">Market</div>;
 }
