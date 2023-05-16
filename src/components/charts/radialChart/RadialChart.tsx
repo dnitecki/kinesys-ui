@@ -2,9 +2,20 @@ import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-export default function RadialChart() {
-  const data: ApexOptions = {
-    series: [70],
+export default function RadialChart(values: any, type: any) {
+  const fillColor = (type: string) => {
+    if (type === "sales") {
+      return ["#F3A225"];
+    }
+    if (type === "client") {
+      return ["#4DBDE8"];
+    } else {
+      return ["#F3A225"];
+    }
+  };
+
+  const chartOptions: ApexOptions = {
+    series: [values.values],
     chart: {
       height: 200,
       type: "radialBar",
@@ -12,8 +23,7 @@ export default function RadialChart() {
     plotOptions: {
       radialBar: {
         hollow: {
-          margin: 15,
-          size: "70%",
+          size: "60%",
         },
         dataLabels: {
           name: {
@@ -22,6 +32,7 @@ export default function RadialChart() {
           value: {
             offsetY: 10,
             fontSize: "30px",
+            color: "#F3A225",
             fontWeight: "bold",
             formatter: function (val) {
               let number = val.toString();
@@ -35,21 +46,19 @@ export default function RadialChart() {
         },
       },
     },
-    dataLabels: {
-      offsetX: -500,
-      offsetY: -50,
-      textAnchor: "middle",
-    },
     stroke: {
       lineCap: "round",
+    },
+    fill: {
+      colors: fillColor(type),
     },
   };
 
   return (
     <>
       <ReactApexChart
-        options={data}
-        series={data.series}
+        options={chartOptions}
+        series={chartOptions.series}
         type="radialBar"
         height={200}
         width={150}

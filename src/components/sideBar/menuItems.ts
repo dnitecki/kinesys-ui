@@ -5,8 +5,7 @@ import TaskIcon from "@mui/icons-material/Task";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { SvgIconTypeMap } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { MenuItem } from "../../types/MenuItem";
 
 export const menuItems: MenuItem[] = [
   {
@@ -48,9 +47,3 @@ export const subMenu: MenuItem[] = [
     url: "",
   },
 ];
-
-export type MenuItem = {
-  text: string;
-  icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
-  url: string;
-};
