@@ -2,7 +2,7 @@ import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-export default function RadialChart(values: any, type: any) {
+export default function RadialChart({ ...data }: any) {
   const fillColor = (type: string) => {
     if (type === "sales") {
       return ["#F3A225"];
@@ -13,9 +13,16 @@ export default function RadialChart(values: any, type: any) {
       return ["#F3A225"];
     }
   };
+  const textColor = (title: string) => {
+    if (title === "Total Statuses") {
+      return "#F3A225";
+    } else {
+      return "#212121";
+    }
+  };
 
   const chartOptions: ApexOptions = {
-    series: [values.values],
+    series: [data?.radialChart?.values],
     chart: {
       height: 200,
       type: "radialBar",
@@ -32,7 +39,7 @@ export default function RadialChart(values: any, type: any) {
           value: {
             offsetY: 10,
             fontSize: "30px",
-            color: "#F3A225",
+            color: textColor(data?.title),
             fontWeight: "bold",
             formatter: function (val) {
               let number = val.toString();
@@ -50,7 +57,7 @@ export default function RadialChart(values: any, type: any) {
       lineCap: "round",
     },
     fill: {
-      colors: fillColor(type),
+      colors: fillColor(data?.type),
     },
   };
 

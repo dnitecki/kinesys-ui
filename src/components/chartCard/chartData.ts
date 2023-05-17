@@ -21,7 +21,7 @@ export const chartData: ChartDataType[] = [
   {
     data: {
       title: "All Clients",
-      type: "sales",
+      type: "client",
       radialChart: {
         values: 41,
       },
