@@ -31,9 +31,11 @@ export default function Dashboard() {
             <a href="market">View Pipeline Date</a>
             <EastRoundedIcon />
           </section>
-          <section className="page-tiles">
-            <ChartCard />
-          </section>
+          {value === 0 ? (
+            <section className="page-tiles">
+              <ChartCard />
+            </section>
+          ) : null}
         </div>
       </div>
     </>
