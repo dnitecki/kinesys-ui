@@ -28,7 +28,7 @@ export default function Dashboard() {
         <section className="page-header"></section>
         <div className="page-content">
           <section className="page-heading-link">
-            <a href="market">View Pipeline Date</a>
+            <a href="market">View Pipeline Data</a>
             <EastRoundedIcon />
           </section>
           {value === 0 ? (
