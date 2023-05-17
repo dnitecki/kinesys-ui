@@ -32,6 +32,10 @@ export default function RadialChart({ ...data }: any) {
         hollow: {
           size: "60%",
         },
+        track: {
+          background: "#E7E7E7",
+          strokeWidth: "50%",
+        },
         dataLabels: {
           name: {
             show: false,
