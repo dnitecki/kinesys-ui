@@ -81,8 +81,13 @@ input {
   width: 100%;
   font-size: 40px;
 }
-
 .page-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.page-content {
   padding: 2rem;
   width: 100%;
   display: flex;
@@ -122,4 +127,31 @@ input {
   column-gap: 0.5rem;
   border-radius: 10px;
   color: #fff;
+}
+.page-header {
+  display: flex;
+  width: 100%;
+  border-bottom: solid 1px #d8d8d8;
+}
+.page-tabs {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  .MuiTab-textColorPrimary {
+    font-weight: bold;
+  }
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: #f3a225;
+    font-weight: bold;
+    background: #f3a12531;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .MuiTab-textColorPrimary {
+    color: #212121;
+  }
+  .MuiTabs-indicator {
+    border-bottom: #f3a225 3px solid;
+  }
 }

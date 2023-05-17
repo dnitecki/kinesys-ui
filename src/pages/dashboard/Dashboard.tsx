@@ -2,18 +2,37 @@ import React from "react";
 import "./Dashboard.scss";
 import ChartCard from "../../components/chartCard/ChartCard";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
+import Tab from "@material-ui/core/Tab";
+import Tabs from "@material-ui/core/Tabs";
 
 export default function Dashboard() {
+  const [value, setValue] = React.useState(0);
+
   return (
     <>
       <div className="page-container">
-        <section className="page-heading-link">
-          <a href="market">View Pipeline Date</a>
-          <EastRoundedIcon />
-        </section>
-        <section className="page-tiles">
-          <ChartCard />
-        </section>
+        <Tabs
+          className="page-tabs"
+          value={value}
+          textColor="primary"
+          indicatorColor="primary"
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <Tab label="Active TAB One" />
+          <Tab label="Active TAB Two" />
+        </Tabs>
+        <section className="page-header"></section>
+        <div className="page-content">
+          <section className="page-heading-link">
+            <a href="market">View Pipeline Date</a>
+            <EastRoundedIcon />
+          </section>
+          <section className="page-tiles">
+            <ChartCard />
+          </section>
+        </div>
       </div>
     </>
   );
