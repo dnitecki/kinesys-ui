@@ -100,9 +100,11 @@ input {
 }
 .chart-card {
   display: flex;
+  max-width: 9rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 1rem;
   border-radius: 10px;
   border: 2px solid #d8d8d8;
@@ -110,6 +112,7 @@ input {
 .chart-card-title {
   font-size: 24px;
   font-weight: bold;
+  overflow-wrap: break-word;
 }
 .light-card {
   color: #212121;
