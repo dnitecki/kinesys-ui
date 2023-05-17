@@ -149,9 +149,12 @@ input {
     border-top-right-radius: 10px;
   }
   .MuiTab-textColorPrimary {
-    color: #212121;
+    color: #4d4d4d;
   }
   .MuiTabs-indicator {
     border-bottom: #f3a225 3px solid;
+  }
+  .MuiTabs-flexContainer {
+    column-gap: 2rem;
   }
 }

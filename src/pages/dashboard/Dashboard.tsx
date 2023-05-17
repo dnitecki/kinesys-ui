@@ -20,8 +20,10 @@ export default function Dashboard() {
             setValue(newValue);
           }}
         >
-          <Tab label="Active TAB One" />
-          <Tab label="Active TAB Two" />
+          <Tab label="Overview" />
+          <Tab label="Status" />
+          <Tab label="Sales Pipeline" />
+          <Tab label="Clients" />
         </Tabs>
         <section className="page-header"></section>
         <div className="page-content">
