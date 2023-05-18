@@ -150,7 +150,10 @@ input {
 .page-tabs {
   padding-top: 1rem;
   width: 100%;
-  font-weight: bold;
+  .MuiTab-root {
+    font-size: 16px;
+    font-weight: bold;
+  }
   .MuiTab-textColorPrimary {
     font-weight: bold;
   }
