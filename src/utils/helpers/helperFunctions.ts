@@ -26,3 +26,14 @@ export function stringAvatar(name: string) {
     children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
 }
+
+export const chartFillColorByType = (type: string) => {
+  if (type === "sales") {
+    return ["#F3A225"];
+  }
+  if (type === "client") {
+    return ["#4DBDE8"];
+  } else {
+    return ["#F3A225"];
+  }
+};
