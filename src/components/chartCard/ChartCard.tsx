@@ -1,6 +1,5 @@
 import React from "react";
 import RadialChart from "../charts/radialChart/RadialChart";
-import { chartData } from "./chartData";
 import "./ChartCard.scss";
 
 export default function ChartCard({ ...item }: any) {

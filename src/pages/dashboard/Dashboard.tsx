@@ -44,12 +44,19 @@ export default function Dashboard() {
             <a href="market">View Pipeline Data</a>
             <EastRoundedIcon />
           </section>
-          {value === 0 ? (
-            <section className="page-tiles">
-              {chartData.map((item, index) => (
-                <ChartCard {...item} />
-              ))}
-            </section>
+          {value === 1 ? (
+            <>
+              <section className="page-tiles">
+                {chartData.map((item, index) => (
+                  <ChartCard {...item} key={index} />
+                ))}
+              </section>
+              <section className="page-tiles">
+                {chartData.map((item, index) => (
+                  <ChartCard {...item} key={index} />
+                ))}
+              </section>
+            </>
           ) : null}
         </div>
       </div>
