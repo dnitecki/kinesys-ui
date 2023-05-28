@@ -20,7 +20,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 4rem 0 0 0;
 }
 .sidebar-item {
   display: flex;
@@ -99,4 +99,5 @@
 .sidebar-bottom {
   justify-content: flex-end;
   height: 100%;
+  padding: 0 0 2rem 0;
 }
