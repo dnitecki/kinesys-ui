@@ -6,6 +6,7 @@ import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import AddIcon from "@mui/icons-material/Add";
 import { tabItems } from "./tabItems";
+import { chartData } from "../../components/chartCard/chartData";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
@@ -45,7 +46,9 @@ export default function Dashboard() {
           </section>
           {value === 0 ? (
             <section className="page-tiles">
-              <ChartCard />
+              {chartData.map((item, index) => (
+                <ChartCard {...item} />
+              ))}
             </section>
           ) : null}
         </div>

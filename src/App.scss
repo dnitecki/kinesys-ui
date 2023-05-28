@@ -97,6 +97,7 @@ input {
 .page-tiles {
   display: flex;
   justify-content: flex-start;
+  column-gap: 2rem;
 }
 .chart-card {
   display: flex;
