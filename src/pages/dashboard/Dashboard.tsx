@@ -5,6 +5,7 @@ import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import AddIcon from "@mui/icons-material/Add";
+import { tabItems } from "./tabItems";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
@@ -22,10 +23,9 @@ export default function Dashboard() {
               setValue(newValue);
             }}
           >
-            <Tab label="Overview" />
-            <Tab label="Status" />
-            <Tab label="Sales Pipeline" />
-            <Tab label="Clients" />
+            {tabItems.map((item, index) => (
+              <Tab key={index} label={item.text} />
+            ))}
           </Tabs>
           <div className="page-header-buttons">
             <button className="new-client-button">
