@@ -4,6 +4,7 @@ export const chartData: ChartDataType[] = [
   {
     data: {
       title: "Total Statuses",
+      type: "total",
       radialChart: {
         values: 27,
       },
@@ -24,6 +25,17 @@ export const chartData: ChartDataType[] = [
       type: "client",
       radialChart: {
         values: 41,
+      },
+    },
+  },
+  {
+    data: {
+      title: "Statuses Pending",
+      multipleRadial: {
+        values: {
+          series: [89, 41],
+          labels: ["Sales", "Clients"],
+        },
       },
     },
   },

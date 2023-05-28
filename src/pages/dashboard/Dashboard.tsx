@@ -51,11 +51,6 @@ export default function Dashboard() {
                   <ChartCard {...item} key={index} />
                 ))}
               </section>
-              <section className="page-tiles">
-                {chartData.map((item, index) => (
-                  <ChartCard {...item} key={index} />
-                ))}
-              </section>
             </>
           ) : null}
         </div>

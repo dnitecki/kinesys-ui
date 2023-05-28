@@ -1,19 +1,10 @@
-import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
+import { ApexOptions } from "apexcharts";
 
-export default function RadialChart({ ...data }: any) {
-  const textColor = (title: string) => {
-    if (title === "Total Statuses") {
-      return "#F3A225";
-    } else {
-      return "#212121";
-    }
-  };
-
+export default function MultipleRadialChart({ ...data }) {
   const chartOptions: ApexOptions = {
-    series: [data?.radialChart?.values],
+    series: data.multipleRadial.values.series,
     chart: {
       height: 200,
       type: "radialBar",
@@ -21,11 +12,11 @@ export default function RadialChart({ ...data }: any) {
     plotOptions: {
       radialBar: {
         hollow: {
-          size: "60%",
+          size: "50%",
         },
         track: {
           background: "#E7E7E7",
-          strokeWidth: "50%",
+          strokeWidth: "60%",
         },
         dataLabels: {
           name: {
@@ -34,7 +25,6 @@ export default function RadialChart({ ...data }: any) {
           value: {
             offsetY: 10,
             fontSize: "30px",
-            color: textColor(data?.title),
             fontWeight: "bold",
             formatter: function (val) {
               let number = val.toString();
@@ -50,9 +40,6 @@ export default function RadialChart({ ...data }: any) {
     },
     stroke: {
       lineCap: "round",
-    },
-    fill: {
-      colors: chartFillColorByType(data?.type),
     },
   };
 

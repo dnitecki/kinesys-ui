@@ -5,6 +5,9 @@ export type ChartDataType = {
     radialChart?: {
       values: number | undefined;
     };
+    multipleRadial?: {
+      values: MultipleRadialData;
+    };
     barPercentage?: {
       values: number[];
     };
@@ -12,11 +15,21 @@ export type ChartDataType = {
       values: number[];
     };
     barChart?: {
-      values: number[];
+      values: BarChartData[];
     };
     link?: {
       linkText: string;
       linkUrl: string;
     };
   };
+};
+
+export type BarChartData = {
+  name: string;
+  value: number;
+};
+
+export type MultipleRadialData = {
+  series: number[];
+  labels: string[];
 };
