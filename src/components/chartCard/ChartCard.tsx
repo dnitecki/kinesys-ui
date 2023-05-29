@@ -5,14 +5,20 @@ import MultipleRadialChart from "../charts/multipleRadialChart/MultipleRadialCha
 import { cardClassMapper } from "../../mappers/classMapper";
 
 export default function ChartCard({ ...item }: any) {
+  const configureChart = (item: any) => {
+    if (item.data.radialChart) {
+      return <RadialChart {...item.data} />;
+    }
+    if (item.data.multipleRadial) {
+      return <MultipleRadialChart {...item.data} />;
+    }
+  };
+
   return (
     <>
       <ul className="chart-card-list">
         <li className={`chart-card ${cardClassMapper[item.data.type]}`}>
-          {item.data.radialChart ? <RadialChart {...item.data} /> : null}
-          {item.data.multipleRadial ? (
-            <MultipleRadialChart {...item.data} />
-          ) : null}
+          {configureChart(item)}
         </li>
       </ul>
     </>
