@@ -32,10 +32,18 @@ export const chartData: ChartDataType[] = [
     data: {
       title: "Statuses Pending",
       multipleRadial: {
-        values: {
-          series: [89, 41],
-          labels: ["Sales", "Clients"],
-        },
+        values: [
+          {
+            series: 89,
+            label: "Sales",
+            type: "sales",
+          },
+          {
+            series: 41,
+            label: "Clients",
+            type: "client",
+          },
+        ],
       },
     },
   },

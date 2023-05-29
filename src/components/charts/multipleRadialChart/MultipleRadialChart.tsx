@@ -2,10 +2,37 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import "./MultipleRadialChart.scss";
+import { MultipleRadialData } from "../../../types/ChartDataType";
 
 export default function MultipleRadialChart({ ...data }) {
+  const series = data.multipleRadial.values.map(
+    (element: { series: number }) => element.series
+  );
+
+  const barColor = (type: string) => {
+    switch (type) {
+      case "sales":
+        return "bar-sales";
+      case "client":
+        return "bar-clients";
+      default:
+        return null;
+    }
+  };
+
+  const fontColor = (type: string) => {
+    switch (type) {
+      case "sales":
+        return "sales-number";
+      case "client":
+        return "client-number";
+      default:
+        return null;
+    }
+  };
+
   const chartOptions: ApexOptions = {
-    series: data.multipleRadial.values.series,
+    series: series,
     chart: {
       height: 200,
       type: "radialBar",
@@ -61,18 +88,16 @@ export default function MultipleRadialChart({ ...data }) {
         </div>
         <div className="multiRad-legend">
           <div className="chart-card-title">{data.title}</div>
-          <div className="multiRad-bar-container">
-            <div className="multiRad-bar bar-sales">Sales</div>
-            <div className="sales-number">
-              {data.multipleRadial.values.series[0]}
-            </div>
-          </div>
-          <div className="multiRad-bar-container">
-            <div className="multiRad-bar bar-clients">Clients</div>
-            <div className="client-number">
-              {data.multipleRadial.values.series[1]}
-            </div>
-          </div>
+          {data.multipleRadial.values.map(
+            (item: MultipleRadialData, index: number) => (
+              <div className="multiRad-bar-container" key={index}>
+                <div className={`multiRad-bar ${barColor(item.type)}`}>
+                  {item.label}
+                </div>
+                <div className={`${fontColor(item.type)}`}>{item.series}</div>
+              </div>
+            )
+          )}
         </div>
       </div>
     </>
