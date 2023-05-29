@@ -1,0 +1,49 @@
+.multiRad-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+.multiRad-chart {
+  display: flex;
+}
+.multiRad-legend {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.multiRad-bar-container {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.multiRad-bar {
+  display: flex;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+  font-weight: 500;
+}
+.bar-sales {
+  border-left: 7px solid #f3a225;
+  color: #f3a225;
+  background-color: #f3a1253d;
+}
+.bar-clients {
+  border-left: 7px solid #4dbde8;
+  color: #4dbde8;
+  background-color: #4dbce83a;
+}
+.sales-number {
+  color: #f3a225;
+  font-weight: 500;
+}
+.client-number {
+  color: #4dbde8;
+  font-weight: 500;
+}
