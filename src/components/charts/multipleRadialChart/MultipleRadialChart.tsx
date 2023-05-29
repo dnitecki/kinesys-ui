@@ -3,33 +3,12 @@ import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import "./MultipleRadialChart.scss";
 import { MultipleRadialData } from "../../../types/ChartDataType";
+import { barClassMapper, colorClassMapper } from "../../../mappers/classMapper";
 
 export default function MultipleRadialChart({ ...data }) {
   const series = data.multipleRadial.values.map(
     (element: { series: number }) => element.series
   );
-
-  const barColor = (type: string) => {
-    switch (type) {
-      case "sales":
-        return "bar-sales";
-      case "client":
-        return "bar-clients";
-      default:
-        return null;
-    }
-  };
-
-  const fontColor = (type: string) => {
-    switch (type) {
-      case "sales":
-        return "sales-number";
-      case "client":
-        return "client-number";
-      default:
-        return null;
-    }
-  };
 
   const chartOptions: ApexOptions = {
     series: series,
@@ -91,10 +70,12 @@ export default function MultipleRadialChart({ ...data }) {
           {data.multipleRadial.values.map(
             (item: MultipleRadialData, index: number) => (
               <div className="multiRad-bar-container" key={index}>
-                <div className={`multiRad-bar ${barColor(item.type)}`}>
+                <div className={`multiRad-bar ${barClassMapper[item.type]}`}>
                   {item.label}
                 </div>
-                <div className={`${fontColor(item.type)}`}>{item.series}</div>
+                <div className={`${colorClassMapper[item.type]}`}>
+                  {item.series}
+                </div>
               </div>
             )
           )}
