@@ -2,13 +2,18 @@ import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
+import {
+  primaryGrey,
+  primaryOrange,
+  trackColor,
+} from "../../../constants/constants";
 
 export default function RadialChart({ ...data }: any) {
   const textColor = (title: string) => {
     if (title === "Total Statuses") {
-      return "#F3A225";
+      return primaryOrange;
     } else {
-      return "#212121";
+      return primaryGrey;
     }
   };
 
@@ -24,7 +29,7 @@ export default function RadialChart({ ...data }: any) {
           size: "60%",
         },
         track: {
-          background: "#E7E7E7",
+          background: trackColor,
           strokeWidth: "50%",
         },
         dataLabels: {

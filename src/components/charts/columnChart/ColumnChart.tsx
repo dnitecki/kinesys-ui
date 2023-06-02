@@ -2,6 +2,7 @@ import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
+import { trackColor } from "../../../constants/constants";
 
 export default function ColumnChart({ ...data }: any) {
   const chartOptions: ApexOptions = {
@@ -16,7 +17,7 @@ export default function ColumnChart({ ...data }: any) {
           size: "60%",
         },
         track: {
-          background: "#E7E7E7",
+          background: trackColor,
           strokeWidth: "50%",
         },
         dataLabels: {

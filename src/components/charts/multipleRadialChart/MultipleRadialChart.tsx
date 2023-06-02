@@ -4,6 +4,11 @@ import { ApexOptions } from "apexcharts";
 import "./MultipleRadialChart.scss";
 import { MultipleRadialData } from "../../../types/ChartDataType";
 import { barClassMapper, colorClassMapper } from "../../../mappers/classMapper";
+import {
+  primaryBlue,
+  primaryOrange,
+  trackColor,
+} from "../../../constants/constants";
 
 export default function MultipleRadialChart({ ...data }) {
   const series = data.multipleRadial.values.map(
@@ -22,7 +27,7 @@ export default function MultipleRadialChart({ ...data }) {
           size: "50%",
         },
         track: {
-          background: "#E7E7E7",
+          background: trackColor,
           strokeWidth: "60%",
         },
         dataLabels: {
@@ -49,7 +54,7 @@ export default function MultipleRadialChart({ ...data }) {
       lineCap: "round",
     },
     fill: {
-      colors: ["#f3a225", "#4dbde8"],
+      colors: [primaryOrange, primaryBlue],
     },
   };
 

@@ -1,0 +1,15 @@
+export const trackColor = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--trackColor");
+
+export const primaryOrange = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--primaryOrange");
+
+export const primaryBlue = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--primaryBlue");
+
+export const primaryGrey = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--primaryGrey");
