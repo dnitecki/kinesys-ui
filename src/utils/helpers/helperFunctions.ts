@@ -1,3 +1,5 @@
+import { primaryBlue, primaryOrange } from "../../constants/constants";
+
 function stringToColor(string: string) {
   let hash = 0;
   let i;
@@ -29,11 +31,11 @@ export function stringAvatar(name: string) {
 
 export const chartFillColorByType = (type: string) => {
   if (type === "sales") {
-    return ["#F3A225"];
+    return [primaryOrange];
   }
   if (type === "client") {
-    return ["#4DBDE8"];
+    return [primaryBlue];
   } else {
-    return ["#F3A225"];
+    return [primaryOrange];
   }
 };
