@@ -1,15 +1,15 @@
 .search-container {
   display: flex;
   width: fit-content;
-  background-color: #ffffff70;
+  background-color: var(--lightGrey);
   border-radius: 5px;
   padding: 0.5rem;
 }
 .search-container input {
   width: 35rem;
-  color: black;
+  color: var(--black);
 }
 .search-container input::placeholder {
-  color: black;
+  color: var(--black);
   opacity: 1;
 }

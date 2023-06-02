@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c5c5c5; /* color of the scroll thumb */
+  background-color: var(--lightGrey); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 * {
@@ -22,7 +22,7 @@ html {
 }
 
 .app {
-  background-color: #fff;
+  background-color: var(--white);
   height: 100vh;
   width: 100vw;
 }
@@ -45,9 +45,17 @@ html {
 
 :root {
   // colors
-  --primaryColor: #6d80e9;
-  --secondaryColor: #182230;
+  --primaryOrange: #f3a225;
+  --secondaryOrange: #f3a12531;
+  --primaryBlue: #4dbde8;
+  --secondaryBlue: #4dbce83a;
+  --primaryGrey: #212121;
+  --secondaryGrey: #373737;
+  --lightGrey: #ffffff70;
+  --white: #ffffff;
+  --black: #000000;
   --bgColor: #ededed;
+  --borderCard: #d8d8d8;
   --tertiaryColor: #3f51b583;
 
   // other
@@ -108,7 +116,7 @@ input {
   text-align: center;
   padding: 1rem;
   border-radius: 10px;
-  border: 2px solid #d8d8d8;
+  border: 2px solid var(--borderCard);
 }
 .chart-card-title {
   font-size: 24px;
@@ -117,11 +125,11 @@ input {
   overflow-wrap: break-word;
 }
 .light-card {
-  color: #212121;
+  color: var(--primaryGrey);
 }
 .dark-card {
-  background: #212121;
-  color: #fff;
+  background: var(--primaryGrey);
+  color: var(--white);
 }
 .page-heading-link {
   display: flex;
@@ -129,18 +137,18 @@ input {
   align-items: center;
   align-content: center;
   width: 100%;
-  background-color: #f3a225;
+  background-color: var(--primaryOrange);
   padding: 0.5rem;
   column-gap: 0.5rem;
   border-radius: 10px;
-  color: #fff;
+  color: var(--white);
 }
 .page-header {
   display: flex;
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
-  border-bottom: solid 1px #d8d8d8;
+  border-bottom: solid 1px var(--borderCard);
 }
 .page-header-buttons {
   flex: 1;
@@ -160,17 +168,17 @@ input {
     font-weight: bold;
   }
   .MuiTab-textColorPrimary.Mui-selected {
-    color: #f3a225;
+    color: var(--primaryOrange);
     font-weight: bold;
-    background: #f3a12531;
+    background: var(--secondaryOrange);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
   .MuiTab-textColorPrimary {
-    color: #4d4d4d;
+    color: var(--secondaryGrey);
   }
   .MuiTabs-indicator {
-    border-bottom: #f3a225 3px solid;
+    border-bottom: var(--primaryOrange) 3px solid;
   }
   .MuiTabs-flexContainer {
     column-gap: 2rem;

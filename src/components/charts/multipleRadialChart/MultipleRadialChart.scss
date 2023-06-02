@@ -32,20 +32,20 @@
   font-weight: 500;
 }
 .bar-sales {
-  border-left: 7px solid #f3a225;
-  color: #f3a225;
-  background-color: #f3a1253d;
+  border-left: 7px solid var(--primaryOrange);
+  color: var(--primaryOrange);
+  background-color: var(--secondaryOrange);
 }
 .bar-clients {
-  border-left: 7px solid #4dbde8;
-  color: #4dbde8;
-  background-color: #4dbce83a;
+  border-left: 7px solid var(--primaryBlue);
+  color: var(--primaryBlue);
+  background-color: var(--secondaryBlue);
 }
 .sales-number {
-  color: #f3a225;
+  color: var(--primaryOrange);
   font-weight: 500;
 }
 .client-number {
-  color: #4dbde8;
+  color: var(--primaryBlue);
   font-weight: 500;
 }

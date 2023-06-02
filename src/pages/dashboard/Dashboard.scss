@@ -2,9 +2,9 @@
   display: flex;
   border-radius: 5px;
   font-size: 16px;
-  color: #f3a225;
+  color: var(--primaryOrange);
   font-weight: bold;
-  border: solid 2px #f3a225;
+  border: solid 2px var(--primaryOrange);
   height: fit-content;
   justify-content: center;
   align-items: center;
@@ -15,9 +15,9 @@
   display: flex;
   border-radius: 5px;
   font-size: 16px;
-  background: #f3a225;
-  border: solid 2px #f3a225;
-  color: #ffffff;
+  background: var(--primaryOrange);
+  border: solid 2px var(--primaryOrange);
+  color: var(--primaryOrange);
   font-weight: bold;
   height: fit-content;
   justify-content: center;

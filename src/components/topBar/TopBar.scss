@@ -1,5 +1,5 @@
 .topbar-container {
-  background-color: #373737;
+  background-color: var(--secondaryGrey);
   width: 100%;
   height: 80px;
   display: flex;
@@ -19,7 +19,7 @@
   display: flex;
   column-gap: 0.5rem;
   align-items: center;
-  color: #ffffff;
+  color: var(--white);
   cursor: pointer;
 }
 .topbar-user-text {
@@ -35,7 +35,7 @@
   display: flex;
 }
 .topbar-notifications button {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .topbar-role {
@@ -44,7 +44,7 @@
 
 .topbar-role p {
   font-size: 16px;
-  color: #ffffff;
+  color: var(--white);
 }
 .topbar-search {
   display: flex;
