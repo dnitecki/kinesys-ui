@@ -6,18 +6,18 @@ import { cardClassMapper } from "../../mappers/classMapper";
 
 export default function ChartCard({ ...item }: any) {
   const configureChart = (item: any) => {
-    if (item.data.radialChart) {
-      return <RadialChart {...item.data} />;
+    if (item.radialChart) {
+      return <RadialChart {...item} />;
     }
-    if (item.data.multipleRadial) {
-      return <MultipleRadialChart {...item.data} />;
+    if (item.multipleRadial) {
+      return <MultipleRadialChart {...item} />;
     }
   };
 
   return (
     <>
       <ul className="chart-card-list">
-        <li className={`chart-card ${cardClassMapper[item.data.type]}`}>
+        <li className={`chart-card ${cardClassMapper[item.type]}`}>
           {configureChart(item)}
         </li>
       </ul>
