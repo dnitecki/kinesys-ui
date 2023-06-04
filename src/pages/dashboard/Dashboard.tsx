@@ -7,13 +7,14 @@ import Tabs from "@material-ui/core/Tabs";
 import AddIcon from "@mui/icons-material/Add";
 import { tabItems } from "./tabItems";
 import { chartData } from "../../components/chartCard/chartData";
-import { useStatusService } from "../../services/dashboardService";
+import { getStatusService } from "../../services/dashboardService";
+import { useQuery } from "react-query";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
 
-  const { data: statusData, isLoading, error } = useStatusService();
-  console.log(statusData, isLoading, error);
+  const { isLoading, error, data } = useQuery(["status"], getStatusService);
+  console.log(data, isLoading, error);
 
   return (
     <>
