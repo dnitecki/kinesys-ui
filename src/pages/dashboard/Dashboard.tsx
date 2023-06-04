@@ -7,9 +7,13 @@ import Tabs from "@material-ui/core/Tabs";
 import AddIcon from "@mui/icons-material/Add";
 import { tabItems } from "./tabItems";
 import { chartData } from "../../components/chartCard/chartData";
+import { useStatusService } from "../../services/dashboardService";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
+
+  const { data: statusData, isLoading, error } = useStatusService();
+  console.log(statusData, isLoading, error);
 
   return (
     <>
@@ -47,7 +51,7 @@ export default function Dashboard() {
           {value === 1 ? (
             <>
               <section className="page-tiles">
-                {chartData.map((item, index) => (
+                {chartData?.map((item: any, index: number) => (
                   <ChartCard {...item} key={index} />
                 ))}
               </section>
