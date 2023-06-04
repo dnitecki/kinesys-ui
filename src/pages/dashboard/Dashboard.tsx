@@ -11,7 +11,6 @@ import { useQuery } from "react-query";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
-
   const { isLoading, error, data } = useQuery(["status"], getStatusService);
   console.log(isLoading, error);
 
