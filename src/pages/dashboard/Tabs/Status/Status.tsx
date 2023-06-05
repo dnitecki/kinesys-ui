@@ -1,7 +1,7 @@
 import React from "react";
 import ChartCard from "../../../../components/chartCard/ChartCard";
 
-export default function status({ ...data }) {
+export default function Status({ data }: any) {
   return (
     <>
       <section className="page-tiles">

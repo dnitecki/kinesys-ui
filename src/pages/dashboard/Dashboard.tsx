@@ -8,6 +8,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { tabItems } from "./tabItems";
 import { getStatusService } from "../../services/dashboardService";
 import { useQuery } from "react-query";
+import Status from "./Tabs/Status/Status";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
@@ -49,11 +50,7 @@ export default function Dashboard() {
           </section>
           {value === 1 ? (
             <>
-              <section className="page-tiles">
-                {data?.map((item: any, index: number) => (
-                  <ChartCard {...item} key={index} />
-                ))}
-              </section>
+              <Status data={data} />
             </>
           ) : null}
         </div>
