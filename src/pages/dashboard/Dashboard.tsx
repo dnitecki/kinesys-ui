@@ -6,14 +6,26 @@ import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import AddIcon from "@mui/icons-material/Add";
 import { tabItems } from "./tabItems";
-import { getStatusService } from "../../services/dashboardService";
+import {
+  getOverviewService,
+  getStatusService,
+} from "../../services/dashboardService";
 import { useQuery } from "react-query";
 import Status from "./Tabs/Status/Status";
+import Overview from "./Tabs/Overview/Overview";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
-  const { isLoading, error, data } = useQuery(["status"], getStatusService);
-  console.log(isLoading, error);
+  const {
+    isLoading: isStatusLoading,
+    error: statusError,
+    data: statusData,
+  } = useQuery(["status"], getStatusService);
+  const {
+    isLoading: isOverviewLoading,
+    error: overviewError,
+    data: overviewData,
+  } = useQuery(["overview"], getOverviewService);
 
   return (
     <>
@@ -48,9 +60,14 @@ export default function Dashboard() {
             <a href="market">View Pipeline Data</a>
             <EastRoundedIcon />
           </section>
+          {value === 0 ? (
+            <>
+              <Overview data={overviewData} />
+            </>
+          ) : null}
           {value === 1 ? (
             <>
-              <Status data={data} />
+              <Status data={statusData} />
             </>
           ) : null}
         </div>
