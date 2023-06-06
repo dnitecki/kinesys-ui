@@ -16,16 +16,18 @@ import Overview from "./Tabs/Overview/Overview";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
-  const {
-    isLoading: isStatusLoading,
-    error: statusError,
-    data: statusData,
-  } = useQuery(["status"], getStatusService);
+
   const {
     isLoading: isOverviewLoading,
     error: overviewError,
     data: overviewData,
   } = useQuery(["overview"], getOverviewService);
+
+  const {
+    isLoading: isStatusLoading,
+    error: statusError,
+    data: statusData,
+  } = useQuery(["status"], getStatusService);
 
   return (
     <>
