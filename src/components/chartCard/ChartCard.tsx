@@ -3,6 +3,7 @@ import RadialChart from "../charts/radialChart/RadialChart";
 import "./ChartCard.scss";
 import MultipleRadialChart from "../charts/multipleRadialChart/MultipleRadialChart";
 import { cardClassMapper } from "../../mappers/classMapper";
+import ColumnChart from "../charts/columnChart/ColumnChart";
 
 export default function ChartCard({ ...item }: any) {
   const configureChart = (item: any) => {
@@ -11,6 +12,9 @@ export default function ChartCard({ ...item }: any) {
     }
     if (item.multipleRadial) {
       return <MultipleRadialChart {...item} />;
+    }
+    if (item.columnChart) {
+      return <ColumnChart {...item} />;
     }
   };
 

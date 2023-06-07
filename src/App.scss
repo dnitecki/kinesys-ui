@@ -111,12 +111,14 @@ input {
 .chart-card {
   display: flex;
   height: 15rem;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 1rem;
   border-radius: 10px;
+  width: fit-content;
   border: 2px solid var(--borderCard);
 }
 .chart-card-title {
@@ -124,6 +126,12 @@ input {
   line-height: 110%;
   font-weight: bold;
   overflow-wrap: break-word;
+}
+.column-card {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  align-items: flex-start;
 }
 .light-card {
   color: var(--primaryGrey);
