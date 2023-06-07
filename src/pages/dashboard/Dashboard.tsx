@@ -1,6 +1,5 @@
 import React from "react";
 import "./Dashboard.scss";
-import ChartCard from "../../components/chartCard/ChartCard";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
@@ -64,12 +63,20 @@ export default function Dashboard() {
           </section>
           {value === 0 ? (
             <>
-              <Overview data={overviewData} />
+              <Overview
+                data={overviewData}
+                isLoading={isOverviewLoading}
+                error={overviewError}
+              />
             </>
           ) : null}
           {value === 1 ? (
             <>
-              <Status data={statusData} />
+              <Status
+                data={statusData}
+                isLoading={isStatusLoading}
+                error={statusError}
+              />
             </>
           ) : null}
         </div>

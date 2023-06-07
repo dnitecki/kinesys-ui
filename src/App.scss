@@ -108,6 +108,14 @@ input {
   justify-content: center;
   column-gap: 2rem;
 }
+.page-skeleton {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+}
 .chart-card {
   display: flex;
   height: 15rem;
