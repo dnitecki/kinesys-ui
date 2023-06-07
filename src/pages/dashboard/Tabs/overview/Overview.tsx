@@ -3,9 +3,10 @@ import ChartCard from "../../../../components/chartCard/ChartCard";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 
 export default function Overview(props: any) {
+  const isLoading = true;
   return (
     <>
-      {props.isLoading ? (
+      {isLoading ? (
         <div className="page-skeleton">
           <SkeletonLoader />
           <SkeletonLoader />
