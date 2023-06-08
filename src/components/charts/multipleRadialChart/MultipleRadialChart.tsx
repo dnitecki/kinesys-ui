@@ -5,7 +5,9 @@ import "./MultipleRadialChart.scss";
 import { MultipleRadialData } from "../../../types/ChartDataType";
 import { barClassMapper, colorClassMapper } from "../../../mappers/classMapper";
 import {
+  lightGrey,
   primaryBlue,
+  primaryGrey,
   primaryOrange,
   trackColor,
 } from "../../../constants/constants";
@@ -54,7 +56,7 @@ export default function MultipleRadialChart({ ...data }) {
       lineCap: "round",
     },
     fill: {
-      colors: [primaryOrange, primaryBlue],
+      colors: [primaryOrange, primaryBlue, lightGrey],
     },
   };
 
@@ -79,7 +81,7 @@ export default function MultipleRadialChart({ ...data }) {
                   {item.label}
                 </div>
                 <div className={`${colorClassMapper[item.type]}`}>
-                  {item.series}
+                  {item.series}%
                 </div>
               </div>
             )

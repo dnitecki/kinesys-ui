@@ -41,11 +41,21 @@
   color: var(--primaryBlue);
   background-color: var(--secondaryBlue);
 }
+.bar-all {
+  border-left: 7px solid var(--secondaryGrey);
+  color: var(--secondaryGrey);
+  background-color: var(--trackColor);
+}
 .sales-number {
   color: var(--primaryOrange);
   font-weight: 500;
 }
 .client-number {
   color: var(--primaryBlue);
+  font-weight: 500;
+}
+
+.all-number {
+  color: var(--primaryGrey);
   font-weight: 500;
 }

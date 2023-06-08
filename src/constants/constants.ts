@@ -13,3 +13,7 @@ export const primaryBlue = getComputedStyle(
 export const primaryGrey = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--primaryGrey");
+
+export const lightGrey = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--lightGrey");
