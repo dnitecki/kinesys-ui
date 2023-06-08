@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/KINESYS-UI/static/css/main.3efae3b9.css",
-    "main.js": "/KINESYS-UI/static/js/main.608611f1.js",
+    "main.css": "/KINESYS-UI/static/css/main.cdf928c2.css",
+    "main.js": "/KINESYS-UI/static/js/main.6d0cb68b.js",
     "static/media/KinesysIcon.svg": "/KINESYS-UI/static/media/KinesysIcon.a9f54c9c6e57f32a77582c3820b039d3.svg",
     "index.html": "/KINESYS-UI/index.html",
-    "main.3efae3b9.css.map": "/KINESYS-UI/static/css/main.3efae3b9.css.map",
-    "main.608611f1.js.map": "/KINESYS-UI/static/js/main.608611f1.js.map"
+    "main.cdf928c2.css.map": "/KINESYS-UI/static/css/main.cdf928c2.css.map",
+    "main.6d0cb68b.js.map": "/KINESYS-UI/static/js/main.6d0cb68b.js.map"
   },
   "entrypoints": [
-    "static/css/main.3efae3b9.css",
-    "static/js/main.608611f1.js"
+    "static/css/main.cdf928c2.css",
+    "static/js/main.6d0cb68b.js"
   ]
 }
