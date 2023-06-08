@@ -11,11 +11,15 @@ export default function Overview(props: any) {
           <SkeletonLoader />
         </div>
       ) : (
-        <section className="page-tiles">
-          {props.data?.map((item: any, index: number) => (
-            <ChartCard {...item} key={index} />
+        <>
+          {props.data?.map((row: any, index: number) => (
+            <section className="page-tiles" key={index}>
+              {row.data.map((item: any, index: number) => (
+                <ChartCard {...item} key={index} />
+              ))}
+            </section>
           ))}
-        </section>
+        </>
       )}
     </>
   );

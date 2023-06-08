@@ -7,7 +7,6 @@ import { barClassMapper, colorClassMapper } from "../../../mappers/classMapper";
 import {
   lightGrey,
   primaryBlue,
-  primaryGrey,
   primaryOrange,
   trackColor,
 } from "../../../constants/constants";

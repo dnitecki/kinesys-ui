@@ -14,12 +14,13 @@ export default function SkeletonLoader() {
             </Skeleton>
             <Skeleton
               sx={{ display: "flex", height: "100px", width: "100%" }}
+              animation="wave"
             />
           </div>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
         </div>
         <div className="skeleton-loader">
           <div className="skeleton-loader-top">
@@ -28,12 +29,13 @@ export default function SkeletonLoader() {
             </Skeleton>
             <Skeleton
               sx={{ display: "flex", height: "100px", width: "100%" }}
+              animation="wave"
             />
           </div>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
         </div>
         <div className="skeleton-loader">
           <div className="skeleton-loader-top">
@@ -42,12 +44,13 @@ export default function SkeletonLoader() {
             </Skeleton>
             <Skeleton
               sx={{ display: "flex", height: "100px", width: "100%" }}
+              animation="wave"
             />
           </div>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
+          <Skeleton animation="wave" />
         </div>
       </div>
     </>
