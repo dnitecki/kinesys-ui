@@ -135,11 +135,24 @@ input {
   font-weight: bold;
   overflow-wrap: break-word;
 }
-.column-card {
+.chart-card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.2rem;
+  column-gap: 0.5rem;
+  color: var(--primaryOrange);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.column-card-label {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  display: flex;
+  flex-direction: column;
+  top: 16px;
+  left: 16px;
   align-items: flex-start;
+  z-index: 2;
 }
 .light-card {
   color: var(--primaryGrey);
@@ -152,7 +165,6 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   width: 100%;
   background-color: var(--primaryOrange);
   padding: 0.5rem;

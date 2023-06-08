@@ -1,27 +1,22 @@
 import { ApexOptions } from "apexcharts";
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
 
 export default function ColumnChart({ ...data }: any) {
-  const formatData = () => {
-    const keys = ["data"];
-    const series = data.columnChart.values.map(
-      (element: { series: number[] }) => element.series
-    );
-    const seriesObj = keys.reduce(
-      (obj, key, index) => ({ ...obj, [key]: series[index] }),
-      {}
-    );
-    console.log(seriesObj);
-    return [seriesObj];
-  };
-  formatData();
+  const response = data.columnChart.values;
+  const series = response.map((item: any) => {
+    return {
+      name: item.label,
+      data: item.series,
+    };
+  });
+
   const chartOptions: ApexOptions = {
-    series: [],
+    series: series,
     chart: {
       height: 350,
-      width: "100%",
       type: "bar",
       sparkline: {
         enabled: true,
@@ -45,7 +40,7 @@ export default function ColumnChart({ ...data }: any) {
     },
     plotOptions: {
       bar: {
-        borderRadius: 2.5,
+        borderRadius: 2,
         horizontal: false,
         columnWidth: "30%",
         barHeight: "100%",
@@ -65,6 +60,20 @@ export default function ColumnChart({ ...data }: any) {
       },
     },
     xaxis: {
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
       labels: {
         show: false,
       },
@@ -79,7 +88,13 @@ export default function ColumnChart({ ...data }: any) {
 
   return (
     <>
-      <div className="chart-card-title column-card">{data.title}</div>
+      <div className="column-card-label">
+        <div className="chart-card-title">{data.title}</div>
+        <div className="chart-card-link">
+          <a href="status">View Status</a>
+          <EastRoundedIcon />
+        </div>
+      </div>
       <ReactApexChart
         options={chartOptions}
         series={chartOptions.series}

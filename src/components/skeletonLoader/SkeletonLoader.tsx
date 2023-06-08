@@ -10,7 +10,7 @@ export default function SkeletonLoader() {
         <div className="skeleton-loader">
           <div className="skeleton-loader-top">
             <Skeleton variant="circular">
-              <Avatar sx={{ width: 56, height: 56 }} />
+              <Avatar sx={{ width: 70, height: 70 }} />
             </Skeleton>
             <Skeleton
               sx={{ display: "flex", height: "100px", width: "100%" }}
@@ -24,7 +24,7 @@ export default function SkeletonLoader() {
         <div className="skeleton-loader">
           <div className="skeleton-loader-top">
             <Skeleton variant="circular">
-              <Avatar sx={{ width: 56, height: 56 }} />
+              <Avatar sx={{ width: 70, height: 70 }} />
             </Skeleton>
             <Skeleton
               sx={{ display: "flex", height: "100px", width: "100%" }}
@@ -38,7 +38,7 @@ export default function SkeletonLoader() {
         <div className="skeleton-loader">
           <div className="skeleton-loader-top">
             <Skeleton variant="circular">
-              <Avatar sx={{ width: 56, height: 56 }} />
+              <Avatar sx={{ width: 70, height: 70 }} />
             </Skeleton>
             <Skeleton
               sx={{ display: "flex", height: "100px", width: "100%" }}
