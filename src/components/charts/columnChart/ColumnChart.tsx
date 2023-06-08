@@ -3,6 +3,7 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
+import "./ColumnChart.scss";
 
 export default function ColumnChart({ ...data }: any) {
   const response = data.columnChart.values;
@@ -16,14 +17,14 @@ export default function ColumnChart({ ...data }: any) {
   const chartOptions: ApexOptions = {
     series: series,
     chart: {
-      height: 350,
+      height: "auto",
       type: "bar",
       sparkline: {
         enabled: true,
       },
       toolbar: {
         show: true,
-        offsetY: -12,
+        offsetY: -30,
         tools: {
           download: true,
           selection: false,
@@ -36,7 +37,7 @@ export default function ColumnChart({ ...data }: any) {
       },
     },
     grid: {
-      show: true,
+      show: false,
     },
     plotOptions: {
       bar: {
@@ -95,13 +96,15 @@ export default function ColumnChart({ ...data }: any) {
           <EastRoundedIcon />
         </div>
       </div>
-      <ReactApexChart
-        options={chartOptions}
-        series={chartOptions.series}
-        type="bar"
-        height={200}
-        width={700}
-      />
+      <div className="column-chart-container">
+        <ReactApexChart
+          options={chartOptions}
+          series={chartOptions.series}
+          type="bar"
+          height={200}
+          width={700}
+        />
+      </div>
     </>
   );
 }

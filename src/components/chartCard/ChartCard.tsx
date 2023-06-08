@@ -21,7 +21,7 @@ export default function ChartCard({ ...item }: any) {
   return (
     <>
       <ul className="chart-card-list">
-        <li className={`chart-card ${cardClassMapper[item.type]}`}>
+        <li className={`chart-card ${cardClassMapper[item?.type]}`}>
           {configureChart(item)}
         </li>
       </ul>
