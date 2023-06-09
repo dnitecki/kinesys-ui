@@ -11,7 +11,7 @@ import {
 } from "../../services/dashboardService";
 import { useQuery } from "react-query";
 import Status from "./Tabs/Status/Status";
-import Overview from "./Tabs/Overview/Overview";
+import Overview from "./Tabs/Owen/Overview";
 
 export default function Dashboard() {
   const [value, setValue] = React.useState(0);
