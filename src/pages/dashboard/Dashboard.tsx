@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.scss";
-import EastRoundedIcon from "@mui/icons-material/EastRounded";
+
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import AddIcon from "@mui/icons-material/Add";
@@ -57,10 +57,6 @@ export default function Dashboard() {
           </div>
         </section>
         <div className="page-content">
-          <section className="page-heading-link">
-            <a href="market">View Pipeline Data</a>
-            <EastRoundedIcon />
-          </section>
           {value === 0 ? (
             <>
               <Overview

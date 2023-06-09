@@ -102,7 +102,7 @@ export default function ColumnChart({ ...data }: any) {
           series={chartOptions.series}
           type="bar"
           height={200}
-          width={700}
+          width={600}
         />
       </div>
     </>

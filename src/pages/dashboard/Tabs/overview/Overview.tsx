@@ -12,13 +12,15 @@ export default function Overview(props: any) {
         </div>
       ) : (
         <>
-          {props.data?.map((row: any, index: number) => (
-            <section className="page-tiles" key={index}>
-              {row.data.map((item: any, index: number) => (
-                <ChartCard {...item} key={index} />
-              ))}
-            </section>
-          ))}
+          <div className="page-tiles-container">
+            {props.data?.map((row: any, index: number) => (
+              <section className="page-tiles" key={index}>
+                {row.data.map((item: any, index: number) => (
+                  <ChartCard {...item} key={index} />
+                ))}
+              </section>
+            ))}
+          </div>
         </>
       )}
     </>
