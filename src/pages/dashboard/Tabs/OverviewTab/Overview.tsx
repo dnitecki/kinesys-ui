@@ -12,7 +12,6 @@ export default function Overview(props: any) {
         </div>
       ) : (
         <>
-          {" "}
           <div className="page-content-scroll">
             <div className="page-tiles-container">
               {props.data?.map((row: any, index: number) => (
