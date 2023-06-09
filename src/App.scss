@@ -16,7 +16,7 @@
 
   // other
   --shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
-  --topBarHeight: 80px;
+  --topBarHeight: 5rem;
 }
 ::-webkit-scrollbar {
   height: 8px;
@@ -100,22 +100,30 @@ input {
   overflow: hidden;
 }
 .page-content {
-  padding: 2rem 3rem 2rem 3rem;
   width: 100%;
   height: 100%;
-  display: flex;
   overflow: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+.page-content-scroll {
+  display: flex;
+  min-height: 115%;
+  width: 100%;
   justify-content: center;
 }
 .page-tiles-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
   width: 80rem;
-  row-gap: 3rem;
+  row-gap: 2rem;
 }
 .page-tiles {
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: space-between;
 }
 .page-skeleton {

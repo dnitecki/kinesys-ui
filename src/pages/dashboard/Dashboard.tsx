@@ -57,24 +57,26 @@ export default function Dashboard() {
           </div>
         </section>
         <div className="page-content">
-          {value === 0 ? (
-            <>
-              <Overview
-                data={overviewData}
-                isLoading={isOverviewLoading}
-                error={overviewError}
-              />
-            </>
-          ) : null}
-          {value === 1 ? (
-            <>
-              <Status
-                data={statusData}
-                isLoading={isStatusLoading}
-                error={statusError}
-              />
-            </>
-          ) : null}
+          <div className="page-content-scroll">
+            {value === 0 ? (
+              <>
+                <Overview
+                  data={overviewData}
+                  isLoading={isOverviewLoading}
+                  error={overviewError}
+                />
+              </>
+            ) : null}
+            {value === 1 ? (
+              <>
+                <Status
+                  data={statusData}
+                  isLoading={isStatusLoading}
+                  error={statusError}
+                />
+              </>
+            ) : null}
+          </div>
         </div>
       </div>
     </>
