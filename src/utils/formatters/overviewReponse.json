@@ -1,0 +1,185 @@
+{
+  "headerText": "Goals",
+  "response": {
+    "2023": [
+      {
+        "data": [
+          {
+            "title": "Goals",
+            "multipleRadial": {
+              "values": [
+                {
+                  "series": 89,
+                  "label": "$12,250,000",
+                  "type": "sales"
+                },
+                {
+                  "series": 41,
+                  "label": "$250,000",
+                  "type": "client"
+                },
+                {
+                  "series": 100,
+                  "label": "$120,000,000",
+                  "type": "all"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Monthly",
+            "type": "client",
+            "columnChart": {
+              "values": [
+                {
+                  "series": [44, 55, 57, 56, 61, 58, 63, 60, 66, 63, 60, 66],
+                  "label": "Sales"
+                },
+                {
+                  "series": [76, 85, 101, 98, 87, 105, 91, 114, 94, 63, 60, 66],
+                  "label": "Clients"
+                },
+                {
+                  "series": [35, 41, 36, 26, 45, 48, 52, 53, 41, 63, 60, 66],
+                  "label": "Goal"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "title": "Total Statuses",
+            "type": "total",
+            "radialChart": {
+              "values": 27
+            }
+          },
+          {
+            "title": "All Sales",
+            "type": "sales",
+            "radialChart": {
+              "values": 89
+            }
+          },
+          {
+            "title": "All Clients",
+            "type": "client",
+            "radialChart": {
+              "values": 41
+            }
+          },
+          {
+            "title": "Statuses Pending",
+            "multipleRadial": {
+              "values": [
+                {
+                  "series": 89,
+                  "label": "Sales",
+                  "type": "sales"
+                },
+                {
+                  "series": 41,
+                  "label": "Clients",
+                  "type": "client"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "2022": [
+      {
+        "data": [
+          {
+            "title": "Goals",
+            "multipleRadial": {
+              "values": [
+                {
+                  "series": 89,
+                  "label": "$12,250,000",
+                  "type": "sales"
+                },
+                {
+                  "series": 41,
+                  "label": "$250,000",
+                  "type": "client"
+                },
+                {
+                  "series": 100,
+                  "label": "$120,000,000",
+                  "type": "all"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Monthly",
+            "type": "client",
+            "columnChart": {
+              "values": [
+                {
+                  "series": [44, 55, 57, 56, 61, 58, 63, 60, 66, 63, 60, 66],
+                  "label": "Sales"
+                },
+                {
+                  "series": [76, 85, 101, 98, 87, 105, 91, 114, 94, 63, 60, 66],
+                  "label": "Clients"
+                },
+                {
+                  "series": [35, 41, 36, 26, 45, 48, 52, 53, 41, 63, 60, 66],
+                  "label": "Goal"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "title": "Total Statuses",
+            "type": "total",
+            "radialChart": {
+              "values": 27
+            }
+          },
+          {
+            "title": "All Sales",
+            "type": "sales",
+            "radialChart": {
+              "values": 89
+            }
+          },
+          {
+            "title": "All Clients",
+            "type": "client",
+            "radialChart": {
+              "values": 41
+            }
+          },
+          {
+            "title": "Statuses Pending",
+            "multipleRadial": {
+              "values": [
+                {
+                  "series": 89,
+                  "label": "Sales",
+                  "type": "sales"
+                },
+                {
+                  "series": 41,
+                  "label": "Clients",
+                  "type": "client"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

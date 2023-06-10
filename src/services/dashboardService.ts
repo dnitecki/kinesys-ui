@@ -5,7 +5,7 @@ export const getOverviewService = async () => {
   const result = await axios
     .get(`${MOCK_API_URL}/overview`)
     .then((res) => res.data);
-  return result.response;
+  return result;
 };
 
 export const getStatusService = async () => {
