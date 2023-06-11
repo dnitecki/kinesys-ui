@@ -1,9 +1,8 @@
 .topbar-container {
+  display: flex;
   background-color: var(--secondaryGrey);
   width: 100%;
   min-height: var(--topBarHeight);
-  max-height: var(--topBarHeight);
-  display: flex;
   justify-content: center;
   column-gap: 3rem;
   padding-right: 4rem;

@@ -8,13 +8,14 @@ import {
   primaryOrange,
   secondaryOrange,
 } from "../../../../constants/constants";
+import ColumnMarkerChart from "../../../../components/charts/columnMarkerChart/ColumnMarkerChart";
 
 export default function Overview(props: any) {
   const [year, setYear] = React.useState("2023");
   const handleChange = (event: any) => {
     setYear(event.target.value as string);
   };
-  const yearRange: string[] = Object.keys(props.data?.response || {})
+  const yearRange: string[] = Object.keys(props.data?.personal.response || {})
     .sort()
     .reverse();
 
@@ -31,7 +32,7 @@ export default function Overview(props: any) {
             <div className="page-tiles-container">
               <div className="page-section-header">
                 <div className="page-section-header-text">
-                  {props.data?.headerText}
+                  {props.data?.personal.headerText}
                 </div>
                 <div className="page-section-header-menu">
                   <button className="edit-goals-button">
@@ -76,13 +77,23 @@ export default function Overview(props: any) {
                   </div>
                 </div>
               </div>
-              {props.data?.response[year].map((row: any, index: number) => (
-                <section className="page-tiles" key={index}>
-                  {row.data.map((item: any, index: number) => (
-                    <ChartCard {...item} key={index} />
-                  ))}
-                </section>
-              ))}
+              {props.data?.personal.response[year].map(
+                (row: any, index: number) => (
+                  <section className="page-tiles" key={index}>
+                    {row.data.map((item: any, index: number) => (
+                      <ChartCard {...item} key={index} />
+                    ))}
+                  </section>
+                )
+              )}
+              <div className="page-section-header">
+                <div className="page-section-header-text">
+                  {props.data?.market.headerText}
+                </div>
+              </div>
+              <section className="page-tiles">
+                <ColumnMarkerChart />
+              </section>
             </div>
           </div>
         </>
