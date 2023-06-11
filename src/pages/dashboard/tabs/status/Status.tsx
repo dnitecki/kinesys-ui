@@ -13,18 +13,16 @@ export default function Status(props: any) {
         </div>
       ) : (
         <>
-          <div className="page-content-scroll">
-            <div className="page-tiles-container">
-              <section className="page-heading-link">
-                <a href="market">View Pipeline Data</a>
-                <EastRoundedIcon />
-              </section>
-              <section className="page-tiles">
-                {props.data?.map((item: any, index: number) => (
-                  <ChartCard {...item} key={index} />
-                ))}
-              </section>
-            </div>
+          <div className="page-tiles-container">
+            <section className="page-heading-link">
+              <a href="market">View Pipeline Data</a>
+              <EastRoundedIcon />
+            </section>
+            <section className="page-tiles">
+              {props.data?.map((item: any, index: number) => (
+                <ChartCard {...item} key={index} />
+              ))}
+            </section>
           </div>
         </>
       )}
