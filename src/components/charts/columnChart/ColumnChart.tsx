@@ -43,7 +43,7 @@ export default function ColumnChart({ ...data }: any) {
       bar: {
         borderRadius: 2,
         horizontal: false,
-        columnWidth: "30%",
+        columnWidth: "50%",
         barHeight: "100%",
       },
     },
