@@ -8,7 +8,7 @@ export const tabItems: TabItem[] = [
     text: "Status",
   },
   {
-    text: "Sales Pipeline",
+    text: "Pipeline",
   },
   {
     text: "Clients",
