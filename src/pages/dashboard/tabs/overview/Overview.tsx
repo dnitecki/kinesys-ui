@@ -33,7 +33,7 @@ export default function Overview(props: any) {
                     <EditIcon />
                   </button>
                   <div className="year-filter">
-                    <FormControl>
+                    <FormControl sx={{ m: 1, minWidth: 120 }}>
                       <InputLabel
                         variant="outlined"
                         id="simple-select-helper-label"
