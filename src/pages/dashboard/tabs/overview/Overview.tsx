@@ -3,7 +3,7 @@ import ChartCard from "../../../../components/chartCard/ChartCard";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 import "./Overview.scss";
 import EditIcon from "@mui/icons-material/Edit";
-import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material/";
 
 export default function Overview(props: any) {
   const [year, setYear] = React.useState("2023");
