@@ -51,6 +51,9 @@ export default function Overview(props: any) {
                         label="Age"
                         variant="outlined"
                         onChange={handleChange}
+                        sx={{
+                          borderRadius: "5px",
+                        }}
                         MenuProps={{
                           sx: {
                             "&& .Mui-selected": {
