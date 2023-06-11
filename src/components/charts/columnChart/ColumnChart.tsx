@@ -24,7 +24,7 @@ export default function ColumnChart({ ...data }: any) {
       },
       toolbar: {
         show: true,
-        offsetY: -30,
+        offsetY: -60,
         tools: {
           download: true,
           selection: false,
