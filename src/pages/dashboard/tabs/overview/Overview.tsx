@@ -11,10 +11,12 @@ import {
 
 export default function Overview(props: any) {
   const [year, setYear] = React.useState("2023");
-
   const handleChange = (event: any) => {
     setYear(event.target.value as string);
   };
+  const yearRange: string[] = Object.keys(props.data?.response || {})
+    .sort()
+    .reverse();
 
   return (
     <>
@@ -64,14 +66,11 @@ export default function Overview(props: any) {
                           },
                         }}
                       >
-                        {Object.keys(props.data.response)
-                          .sort()
-                          .reverse()
-                          .map((year: string, index: number) => (
-                            <MenuItem value={year} key={index}>
-                              {year}
-                            </MenuItem>
-                          ))}
+                        {yearRange?.map((year: string, index: number) => (
+                          <MenuItem value={year} key={index}>
+                            {year}
+                          </MenuItem>
+                        ))}
                       </Select>
                     </FormControl>
                   </div>
