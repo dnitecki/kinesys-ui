@@ -4,6 +4,10 @@ import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader
 import "./Overview.scss";
 import EditIcon from "@mui/icons-material/Edit";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material/";
+import {
+  primaryOrange,
+  secondaryOrange,
+} from "../../../../constants/constants";
 
 export default function Overview(props: any) {
   const [year, setYear] = React.useState("2023");
@@ -47,6 +51,15 @@ export default function Overview(props: any) {
                         label="Age"
                         variant="outlined"
                         onChange={handleChange}
+                        MenuProps={{
+                          sx: {
+                            "&& .Mui-selected": {
+                              color: primaryOrange,
+                              fontWeight: "bold",
+                              background: secondaryOrange,
+                            },
+                          },
+                        }}
                       >
                         {Object.keys(props.data.response).map(
                           (year: string, index: number) => (
