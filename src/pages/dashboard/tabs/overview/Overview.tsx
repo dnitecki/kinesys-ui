@@ -48,9 +48,13 @@ export default function Overview(props: any) {
                         variant="outlined"
                         onChange={handleChange}
                       >
-                        <MenuItem value={2023}>2023</MenuItem>
-                        <MenuItem value={2022}>2022</MenuItem>
-                        <MenuItem value={2021}>2021</MenuItem>
+                        {Object.keys(props.data.response).map(
+                          (year: string, index: number) => (
+                            <MenuItem value={year} key={index}>
+                              {year}
+                            </MenuItem>
+                          )
+                        )}
                       </Select>
                     </FormControl>
                   </div>
