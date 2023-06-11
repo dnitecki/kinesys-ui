@@ -1,8 +1,7 @@
 import React from "react";
 import "./Dashboard.scss";
-
-import Tab from "@material-ui/core/Tab";
-import Tabs from "@material-ui/core/Tabs";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 import AddIcon from "@mui/icons-material/Add";
 import { tabItems } from "./tabItems";
 import {
