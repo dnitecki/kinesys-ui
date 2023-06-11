@@ -64,13 +64,14 @@ export default function Overview(props: any) {
                           },
                         }}
                       >
-                        {Object.keys(props.data.response).map(
-                          (year: string, index: number) => (
+                        {Object.keys(props.data.response)
+                          .sort()
+                          .reverse()
+                          .map((year: string, index: number) => (
                             <MenuItem value={year} key={index}>
                               {year}
                             </MenuItem>
-                          )
-                        )}
+                          ))}
                       </Select>
                     </FormControl>
                   </div>
