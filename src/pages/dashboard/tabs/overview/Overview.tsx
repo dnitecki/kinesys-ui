@@ -3,7 +3,7 @@ import ChartCard from "../../../../components/chartCard/ChartCard";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 import "./Overview.scss";
 import EditIcon from "@mui/icons-material/Edit";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material/";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import {
   primaryOrange,
   secondaryOrange,
