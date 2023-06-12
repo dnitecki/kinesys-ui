@@ -94,30 +94,26 @@ input {
 }
 .page-container {
   display: flex;
+  height: 100%;
   width: 100%;
   flex-direction: column;
   overflow: hidden;
 }
 .page-content {
   display: flex;
-  height: 100%;
   width: 100%;
+  height: 100%;
   justify-content: center;
-  overflow: auto;
-}
-.page-content-scroll {
-  display: flex;
-  height: 100%;
-  width: 100%;
+  overflow-y: scroll;
 }
 .page-tiles-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   width: 80rem;
   row-gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .page-section-header {
   display: flex;

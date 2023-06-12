@@ -6,6 +6,6 @@
 }
 .appcontainer-content {
   display: flex;
-  height: calc(100% - var(--topBarHeight));
+  height: calc(100vh - var(--topBarHeight));
   width: 100%;
 }
