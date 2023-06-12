@@ -46,9 +46,6 @@
     border-width: 2px;
     border-color: var(--primaryOrange);
   }
-  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline .Mui-focused {
-    border-color: "red";
-  }
   .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
     border-color: var(--primaryOrange);
     border-width: 2px;
