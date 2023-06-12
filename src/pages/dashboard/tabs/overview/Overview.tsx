@@ -3,6 +3,7 @@ import ChartCard from "../../../../components/chartCard/ChartCard";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 import "./Overview.scss";
 import EditIcon from "@mui/icons-material/Edit";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import {
   primaryOrange,
@@ -50,9 +51,10 @@ export default function Overview(props: any) {
                       labelId="simple-select-helper-label"
                       id="simple-select-helper"
                       value={year}
-                      label="Age"
+                      label="Year"
                       variant="outlined"
                       onChange={handleChange}
+                      IconComponent={ExpandMoreIcon}
                       sx={{
                         borderRadius: "5px",
                       }}
