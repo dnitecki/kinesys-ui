@@ -6,10 +6,10 @@ import EditIcon from "@mui/icons-material/Edit";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import {
+  lightOrange,
   primaryOrange,
   secondaryOrange,
 } from "../../../../constants/constants";
-import ColumnMarkerChart from "../../../../components/charts/columnMarkerChart/ColumnMarkerChart";
 
 export default function Overview(props: any) {
   const [year, setYear] = React.useState("2023");
@@ -57,10 +57,14 @@ export default function Overview(props: any) {
                       IconComponent={ExpandMoreIcon}
                       sx={{
                         borderRadius: "5px",
+                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                          borderColor: primaryOrange,
+                          bgcolor: lightOrange,
+                        },
                       }}
                       MenuProps={{
                         sx: {
-                          "&& .Mui-selected": {
+                          "& .Mui-selected": {
                             color: primaryOrange,
                             fontWeight: "bold",
                             background: secondaryOrange,
@@ -92,9 +96,6 @@ export default function Overview(props: any) {
                 {props.data?.market.headerText}
               </div>
             </div>
-            <section className="page-tiles">
-              <ColumnMarkerChart />
-            </section>
           </div>
         </>
       )}

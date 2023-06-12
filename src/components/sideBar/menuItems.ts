@@ -39,11 +39,11 @@ export const subMenu: MenuItem[] = [
   {
     text: "Profile",
     icon: AccountCircleIcon,
-    url: "",
+    url: "profile",
   },
   {
     text: "Settings",
     icon: SettingsIcon,
-    url: "",
+    url: "settings",
   },
 ];

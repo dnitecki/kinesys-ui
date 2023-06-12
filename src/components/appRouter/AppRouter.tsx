@@ -5,6 +5,8 @@ import Market from "../../pages/market/Market";
 import Teams from "../../pages/teams/Teams";
 import Catalog from "../../pages/catalog/Catalog";
 import Tasks from "../../pages/tasks/Tasks";
+import Profile from "../../pages/profile/Profile";
+import Settings from "../../pages/settings/Settings";
 
 export default function AppRouter() {
   return (
@@ -15,6 +17,8 @@ export default function AppRouter() {
         <Route path="teams" element={<Teams />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="tasks" element={<Tasks />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="settings" element={<Settings />} />
         <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
       </Routes>
     </>

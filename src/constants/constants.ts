@@ -10,6 +10,10 @@ export const secondaryOrange = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--secondaryOrange");
 
+export const lightOrange = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--lightOrange");
+
 export const primaryBlue = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--primaryBlue");

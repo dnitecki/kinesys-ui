@@ -2,6 +2,7 @@
   // colors
   --primaryOrange: #f3a225;
   --secondaryOrange: #f3a12531;
+  --lightOrange: #f3a12517;
   --primaryBlue: #4dbde8;
   --secondaryBlue: #4dbce83a;
   --primaryGrey: #212121;
@@ -133,6 +134,7 @@ input {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  align-items: center;
   column-gap: 2rem;
 }
 .page-tiles:last-of-type {
