@@ -17,4 +17,6 @@ export const colorClassMapper: Map = {
 export const cardClassMapper: Map = {
   total: "dark-card",
   undefined: "light-card",
+  sales: "light-card",
+  client: "light-card",
 };

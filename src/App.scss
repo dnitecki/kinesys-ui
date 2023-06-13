@@ -11,7 +11,7 @@
   --lightGrey: #a4a4a4;
   --white: #ffffff;
   --black: #000000;
-  --bgColor: #ededed;
+  --bgColor: #f9f9f9;
   --borderCard: #d8d8d8;
   --tertiaryColor: #3f51b583;
 
@@ -61,12 +61,6 @@ html {
   height: 100%;
   width: 100%;
 }
-.app-content-main {
-  background-color: var(--bgColor);
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
 
 button {
   all: unset;
@@ -109,6 +103,7 @@ input {
   height: 100%;
   justify-content: center;
   overflow-y: scroll;
+  background: var(--bgColor);
 }
 .page-tiles-container {
   display: flex;
@@ -126,6 +121,7 @@ input {
 .page-section-header-text {
   display: flex;
   height: 100%;
+  color: var(--secondaryGrey);
   flex-direction: column;
   justify-content: flex-end;
   font-size: 24px;
@@ -138,7 +134,7 @@ input {
   width: 100%;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1rem;
 }
 .page-tiles:last-of-type {
   padding-bottom: 1rem;
@@ -153,6 +149,7 @@ input {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  padding-top: 5rem;
   row-gap: 4rem;
 }
 .chart-card {
@@ -165,6 +162,7 @@ input {
   border-radius: 10px;
   width: fit-content;
   border: 2px solid var(--borderCard);
+  background: var(--white);
 }
 .chart-card-title {
   font-size: 24px;
@@ -192,7 +190,7 @@ input {
   z-index: 2;
 }
 .light-card {
-  color: var(--primaryGrey);
+  color: var(--secondaryGrey);
 }
 .dark-card {
   background: var(--primaryGrey);
