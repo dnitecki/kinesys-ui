@@ -1,6 +1,6 @@
 .new-client-button {
   display: flex;
-  border-radius: 5px;
+  border-radius: var(--buttonRadius);
   font-size: 16px;
   color: var(--primaryOrange);
   font-weight: bold;
@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 0.2rem;
-  padding: 0.3rem 1rem 0.3rem 1rem;
+  padding: var(--buttonPadding);
   transition: var(--hoverAnimation);
 }
 .new-client-button:hover {
@@ -17,7 +17,7 @@
 }
 .new-estimate-button {
   display: flex;
-  border-radius: 5px;
+  border-radius: var(--buttonRadius);
   font-size: 16px;
   background: var(--primaryOrange);
   border: solid 2px var(--primaryOrange);
@@ -27,5 +27,5 @@
   justify-content: center;
   align-items: center;
   column-gap: 0.2rem;
-  padding: 0.3rem 1rem 0.3rem 1rem;
+  padding: var(--buttonPadding);
 }

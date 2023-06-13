@@ -6,7 +6,6 @@ import EditIcon from "@mui/icons-material/Edit";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import {
-  lightOrange,
   primaryOrange,
   secondaryOrange,
 } from "../../../../constants/constants";
@@ -41,15 +40,8 @@ export default function Overview(props: any) {
                 </button>
                 <div className="year-filter">
                   <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel
-                      variant="outlined"
-                      id="simple-select-helper-label"
-                    >
-                      Year
-                    </InputLabel>
+                    <InputLabel variant="outlined">Year</InputLabel>
                     <Select
-                      labelId="simple-select-helper-label"
-                      id="simple-select-helper"
                       value={year}
                       label="Year"
                       variant="outlined"
@@ -66,6 +58,9 @@ export default function Overview(props: any) {
                           "&& .Mui-selected": {
                             color: primaryOrange,
                             fontWeight: "bold",
+                            backgroundColor: secondaryOrange,
+                          },
+                          "&&:hover .Mui-selected": {
                             backgroundColor: secondaryOrange,
                           },
                         },
