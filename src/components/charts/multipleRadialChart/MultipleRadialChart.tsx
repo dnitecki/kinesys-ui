@@ -71,34 +71,36 @@ export default function MultipleRadialChart({ ...data }) {
 
   return (
     <>
-      <div className="multiRad-container">
-        <div className="multiRad-chart">
-          <ReactApexChart
-            options={chartOptions}
-            series={chartOptions.series}
-            type="radialBar"
-            height={250}
-            width={200}
-          />
-        </div>
-        <div className="multiRad-legend">
-          <div className="chart-card-title">{data.title}</div>
-          {data.multipleRadial.values.map(
-            (item: MultipleRadialData, index: number) => (
-              <div className="multiRad-bar-container" key={index}>
-                <div
-                  className={`${radMapper[data.title]} ${
-                    barClassMapper[item.type]
-                  }`}
-                >
-                  {item.label}
+      <div className="chart-card">
+        <div className="multiRad-container">
+          <div className="multiRad-chart">
+            <ReactApexChart
+              options={chartOptions}
+              series={chartOptions.series}
+              type="radialBar"
+              height={250}
+              width={200}
+            />
+          </div>
+          <div className="multiRad-legend">
+            <div className="chart-card-title">{data.title}</div>
+            {data.multipleRadial.values.map(
+              (item: MultipleRadialData, index: number) => (
+                <div className="multiRad-bar-container" key={index}>
+                  <div
+                    className={`${radMapper[data.title]} ${
+                      barClassMapper[item.type]
+                    }`}
+                  >
+                    {item.label}
+                  </div>
+                  <div className={`${colorClassMapper[item.type]}`}>
+                    {item.series}%
+                  </div>
                 </div>
-                <div className={`${colorClassMapper[item.type]}`}>
-                  {item.series}%
-                </div>
-              </div>
-            )
-          )}
+              )
+            )}
+          </div>
         </div>
       </div>
     </>

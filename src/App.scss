@@ -225,9 +225,11 @@ input {
 .page-tabs {
   padding-top: 1rem;
   flex: 2;
+  text-transform: "none";
   .MuiTab-root {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
+    text-transform: capitalize;
   }
   .MuiTab-textColorPrimary {
     font-weight: bold;

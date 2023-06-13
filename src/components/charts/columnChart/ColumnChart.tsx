@@ -17,14 +17,12 @@ export default function ColumnChart({ ...data }: any) {
   const chartOptions: ApexOptions = {
     series: series,
     chart: {
-      height: "auto",
       type: "bar",
       sparkline: {
         enabled: true,
       },
       toolbar: {
         show: true,
-        offsetY: -60,
         tools: {
           download: true,
           selection: false,
@@ -89,21 +87,23 @@ export default function ColumnChart({ ...data }: any) {
 
   return (
     <>
-      <div className="column-card-label">
-        <div className="chart-card-title">{data.title}</div>
-        <div className="chart-card-link">
-          <a href="status">View Status</a>
-          <EastRoundedIcon />
+      <div className="chart-card">
+        <div className="column-card-label">
+          <div className="chart-card-title">{data.title}</div>
+          <div className="chart-card-link">
+            <a href="status">View Status</a>
+            <EastRoundedIcon />
+          </div>
         </div>
-      </div>
-      <div className="column-chart-container">
-        <ReactApexChart
-          options={chartOptions}
-          series={chartOptions.series}
-          type="bar"
-          height={180}
-          width={800}
-        />
+        <div className="column-chart-container">
+          <ReactApexChart
+            options={chartOptions}
+            series={chartOptions.series}
+            type="bar"
+            height={"180%"}
+            width={800}
+          />
+        </div>
       </div>
     </>
   );

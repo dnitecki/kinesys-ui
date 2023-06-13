@@ -63,14 +63,16 @@ export default function RadialChart({ ...data }: any) {
 
   return (
     <>
-      <div className="chart-card-title">{data.title}</div>
-      <ReactApexChart
-        options={chartOptions}
-        series={chartOptions.series}
-        type="radialBar"
-        height={200}
-        width={150}
-      />
+      <div className="chart-card">
+        <div className="chart-card-title">{data.title}</div>
+        <ReactApexChart
+          options={chartOptions}
+          series={chartOptions.series}
+          type="radialBar"
+          height={200}
+          width={150}
+        />
+      </div>
     </>
   );
 }
