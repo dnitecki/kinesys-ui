@@ -57,17 +57,16 @@ export default function Overview(props: any) {
                       IconComponent={ExpandMoreIcon}
                       sx={{
                         borderRadius: "5px",
-                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                        "&&:hover .MuiOutlinedInput-notchedOutline": {
                           borderColor: primaryOrange,
-                          bgcolor: lightOrange,
                         },
                       }}
                       MenuProps={{
                         sx: {
-                          "& .Mui-selected": {
+                          "&& .Mui-selected": {
                             color: primaryOrange,
                             fontWeight: "bold",
-                            background: secondaryOrange,
+                            backgroundColor: secondaryOrange,
                           },
                         },
                       }}

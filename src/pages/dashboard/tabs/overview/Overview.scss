@@ -9,9 +9,12 @@
   padding: 0.3rem 1rem 0.3rem 1rem;
   height: fit-content;
   border-radius: 5px;
+  border: solid 2px transparent;
+  transition: var(--hoverAnimation);
 }
 .edit-goals-button:hover {
   background: var(--lightOrange);
+  border: solid 2px var(--lightOrange);
 }
 .year-filter {
   display: flex;
@@ -24,9 +27,6 @@
     color: var(--primaryOrange);
     font-weight: bold;
     padding: 0.7rem;
-  }
-  .MuiSelect-select .Mui-focused {
-    color: aqua;
   }
   .MuiFormLabel-root.Mui-focused {
     color: var(--primaryOrange);
