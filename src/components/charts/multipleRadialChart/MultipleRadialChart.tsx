@@ -3,7 +3,11 @@ import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import "./MultipleRadialChart.scss";
 import { MultipleRadialData } from "../../../types/ChartDataType";
-import { barClassMapper, colorClassMapper } from "../../../mappers/classMapper";
+import {
+  barClassMapper,
+  colorClassMapper,
+  radMapper,
+} from "../../../mappers/classMapper";
 import {
   lightGrey,
   primaryBlue,
@@ -16,16 +20,22 @@ export default function MultipleRadialChart({ ...data }) {
     (element: { series: number }) => element.series
   );
 
+  const radialSize = (data: any) => {
+    if (data.multipleRadial.values.length > 1) {
+      return "50%";
+    }
+    return "60%";
+  };
+
   const chartOptions: ApexOptions = {
     series: series,
     chart: {
-      height: 200,
       type: "radialBar",
     },
     plotOptions: {
       radialBar: {
         hollow: {
-          size: "50%",
+          size: radialSize(data),
         },
         track: {
           background: trackColor,
@@ -67,8 +77,8 @@ export default function MultipleRadialChart({ ...data }) {
             options={chartOptions}
             series={chartOptions.series}
             type="radialBar"
-            height={200}
-            width={150}
+            height={250}
+            width={200}
           />
         </div>
         <div className="multiRad-legend">
@@ -76,7 +86,11 @@ export default function MultipleRadialChart({ ...data }) {
           {data.multipleRadial.values.map(
             (item: MultipleRadialData, index: number) => (
               <div className="multiRad-bar-container" key={index}>
-                <div className={`multiRad-bar ${barClassMapper[item.type]}`}>
+                <div
+                  className={`${radMapper[data.title]} ${
+                    barClassMapper[item.type]
+                  }`}
+                >
                   {item.label}
                 </div>
                 <div className={`${colorClassMapper[item.type]}`}>

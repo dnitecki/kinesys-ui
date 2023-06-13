@@ -54,38 +54,46 @@
         {
           "data": [
             {
-              "title": "Total Statuses",
-              "type": "total",
-              "radialChart": {
-                "values": 27
-              }
-            },
-            {
-              "title": "All Sales",
-              "type": "sales",
-              "radialChart": {
-                "values": 89
-              }
-            },
-            {
-              "title": "All Clients",
-              "type": "client",
-              "radialChart": {
-                "values": 41
-              }
-            },
-            {
-              "title": "Statuses Pending",
+              "title": "Overview",
               "multipleRadial": {
                 "values": [
                   {
                     "series": 89,
-                    "label": "Sales",
+                    "label": "$12,250,000",
                     "type": "sales"
                   },
                   {
                     "series": 41,
-                    "label": "Clients",
+                    "label": "$250,000",
+                    "type": "client"
+                  },
+                  {
+                    "series": 100,
+                    "label": "$120,000,000",
+                    "type": "all"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Yearly Sales Completed",
+              "multipleRadial": {
+                "values": [
+                  {
+                    "series": 89,
+                    "label": "$12,250,000",
+                    "type": "sales"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Backlog",
+              "multipleRadial": {
+                "values": [
+                  {
+                    "series": 41,
+                    "label": "$250,000",
                     "type": "client"
                   }
                 ]
@@ -144,38 +152,46 @@
         {
           "data": [
             {
-              "title": "Total Statuses",
-              "type": "total",
-              "radialChart": {
-                "values": 27
-              }
-            },
-            {
-              "title": "All Sales",
-              "type": "sales",
-              "radialChart": {
-                "values": 89
-              }
-            },
-            {
-              "title": "All Clients",
-              "type": "client",
-              "radialChart": {
-                "values": 41
-              }
-            },
-            {
-              "title": "Statuses Pending",
+              "title": "Overview",
               "multipleRadial": {
                 "values": [
                   {
                     "series": 89,
-                    "label": "Sales",
+                    "label": "$12,250,000",
                     "type": "sales"
                   },
                   {
                     "series": 41,
-                    "label": "Clients",
+                    "label": "$250,000",
+                    "type": "client"
+                  },
+                  {
+                    "series": 100,
+                    "label": "$120,000,000",
+                    "type": "all"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Yearly Sales Completed",
+              "multipleRadial": {
+                "values": [
+                  {
+                    "series": 89,
+                    "label": "$12,250,000",
+                    "type": "sales"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Backlog",
+              "multipleRadial": {
+                "values": [
+                  {
+                    "series": 41,
+                    "label": "$250,000",
                     "type": "client"
                   }
                 ]
@@ -234,38 +250,46 @@
         {
           "data": [
             {
-              "title": "Total Statuses",
-              "type": "total",
-              "radialChart": {
-                "values": 27
-              }
-            },
-            {
-              "title": "All Sales",
-              "type": "sales",
-              "radialChart": {
-                "values": 89
-              }
-            },
-            {
-              "title": "All Clients",
-              "type": "client",
-              "radialChart": {
-                "values": 41
-              }
-            },
-            {
-              "title": "Statuses Pending",
+              "title": "Overview",
               "multipleRadial": {
                 "values": [
                   {
                     "series": 89,
-                    "label": "Sales",
+                    "label": "$12,250,000",
                     "type": "sales"
                   },
                   {
                     "series": 41,
-                    "label": "Clients",
+                    "label": "$250,000",
+                    "type": "client"
+                  },
+                  {
+                    "series": 100,
+                    "label": "$120,000,000",
+                    "type": "all"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Yearly Sales Completed",
+              "multipleRadial": {
+                "values": [
+                  {
+                    "series": 89,
+                    "label": "$12,250,000",
+                    "type": "sales"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Backlog",
+              "multipleRadial": {
+                "values": [
+                  {
+                    "series": 41,
+                    "label": "$250,000",
                     "type": "client"
                   }
                 ]
