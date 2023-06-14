@@ -5,13 +5,13 @@
   padding-top: 2rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  border-left: 2px solid var(--borderCard);
+  border-left: var(--border);
 }
 .column-card-label {
   position: absolute;
   justify-content: center;
   display: flex;
-  column-gap: 0.5rem;
+  column-gap: 1.5rem;
   top: 16px;
   left: 16px;
   align-items: center;

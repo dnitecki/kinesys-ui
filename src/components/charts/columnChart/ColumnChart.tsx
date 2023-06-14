@@ -40,7 +40,8 @@ export default function ColumnChart({ ...data }: any) {
     },
     plotOptions: {
       bar: {
-        borderRadius: 2,
+        borderRadiusApplication: "end",
+        borderRadius: 4,
         horizontal: false,
         columnWidth: "50%",
         barHeight: "100%",
@@ -50,7 +51,6 @@ export default function ColumnChart({ ...data }: any) {
       enabled: false,
     },
     stroke: {
-      lineCap: "round",
       width: 2,
       colors: ["transparent"],
     },
@@ -92,7 +92,7 @@ export default function ColumnChart({ ...data }: any) {
         <div className="column-card-label">
           <div className="chart-card-title">{data.columnChart.title}</div>
           <div className="app-button">
-            <a href="status">View Status</a>
+            <button>View Status</button>
             <EastRoundedIcon />
           </div>
         </div>

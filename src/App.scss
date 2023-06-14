@@ -21,6 +21,7 @@
   --hoverAnimation: all 175ms ease-in-out;
   --buttonPadding: 0.3rem 0.7rem 0.3rem 0.7rem;
   --buttonRadius: 5px;
+  --border: 2px solid var(--borderCard);
 }
 ::-webkit-scrollbar {
   height: 8px;
@@ -175,7 +176,7 @@ input {
   display: flex;
   border-radius: 10px;
   width: 100%;
-  border: 2px solid var(--borderCard);
+  border: var(--border);
   background: var(--white);
 }
 .chart-card-container {
@@ -246,6 +247,7 @@ input {
     font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
+    min-width: 10rem;
   }
   .MuiTab-textColorPrimary {
     font-weight: bold;
@@ -254,8 +256,8 @@ input {
     color: var(--primaryOrange);
     font-weight: bold;
     background: var(--secondaryOrange);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: var(--buttonRadius);
+    border-top-right-radius: var(--buttonRadius);
   }
   .MuiTab-textColorPrimary {
     color: var(--secondaryGrey);
@@ -264,6 +266,6 @@ input {
     border-bottom: var(--primaryOrange) 3px solid;
   }
   .MuiTabs-flexContainer {
-    column-gap: 2rem;
+    column-gap: 1rem;
   }
 }
