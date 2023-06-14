@@ -27,6 +27,19 @@ export default function MultipleRadialChart({ ...data }) {
     return "70%";
   };
 
+  const radialHeight = (data: any) => {
+    if (data.multipleRadial.values.length > 1) {
+      return 250;
+    }
+    return 220;
+  };
+
+  const radialColor = (data: any) => {
+    if (data.multipleRadial) {
+    }
+    // todo
+  };
+
   const chartOptions: ApexOptions = {
     series: series,
     chart: {
@@ -73,7 +86,7 @@ export default function MultipleRadialChart({ ...data }) {
               options={chartOptions}
               series={chartOptions.series}
               type="radialBar"
-              height={250}
+              height={radialHeight(data)}
               width={200}
             />
           </div>
