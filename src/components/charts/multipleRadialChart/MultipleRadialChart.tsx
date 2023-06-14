@@ -17,7 +17,7 @@ export default function MultipleRadialChart({ ...data }) {
   );
 
   const colors = data.multipleRadial.values.map(
-    (item: { type: any }) => typeColorMapper[item.type]
+    (item: { type: string }) => typeColorMapper[item.type]
   );
 
   const radialSize = (data: any) => {
