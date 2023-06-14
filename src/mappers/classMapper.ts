@@ -23,6 +23,6 @@ export const radMapper: Map = {
   Goals: "multiRad-bar-large",
   "Statuses Pending": "multiRad-bar-large",
   Overview: "multiRad-bar",
-  "Yearly Sales Completed": "multiRad-bar",
+  "Sales Completed": "multiRad-bar",
   Backlog: "multiRad-bar",
 };
