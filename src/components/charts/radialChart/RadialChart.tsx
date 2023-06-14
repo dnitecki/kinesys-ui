@@ -10,7 +10,7 @@ import {
 
 export default function RadialChart({ ...data }: any) {
   const textColor = (title: string) => {
-    if (title === "Total Statuses") {
+    if (data.title === "Total Statuses") {
       return primaryOrange;
     } else {
       return primaryGrey;
@@ -63,16 +63,14 @@ export default function RadialChart({ ...data }: any) {
 
   return (
     <>
-      <div className="chart-card-container">
-        <div className="chart-card-title">{data.title}</div>
-        <ReactApexChart
-          options={chartOptions}
-          series={chartOptions.series}
-          type="radialBar"
-          height={200}
-          width={150}
-        />
-      </div>
+      <div className="chart-card-title">{data.title}</div>
+      <ReactApexChart
+        options={chartOptions}
+        series={chartOptions.series}
+        type="radialBar"
+        height={200}
+        width={150}
+      />
     </>
   );
 }

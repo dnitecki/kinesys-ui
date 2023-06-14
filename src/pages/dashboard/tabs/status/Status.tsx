@@ -18,11 +18,11 @@ export default function Status(props: any) {
               <a href="market">View Pipeline Data</a>
               <EastRoundedIcon />
             </section>
-            <section className="page-tiles">
+            {/* <section className="page-tiles">
               {props.data?.map((item: any, index: number) => (
                 <ChartCard {...item} key={index} />
               ))}
-            </section>
+            </section> */}
           </div>
         </>
       )}
