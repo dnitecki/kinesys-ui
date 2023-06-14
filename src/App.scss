@@ -83,6 +83,24 @@ a {
 input {
   all: unset;
 }
+.app-button {
+  display: flex;
+  font-size: 16px;
+  color: var(--primaryOrange);
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: var(--buttonPadding);
+  height: fit-content;
+  border-radius: var(--buttonRadius);
+  border: solid 2px transparent;
+  transition: var(--hoverAnimation);
+}
+.app-button:hover {
+  background: var(--lightOrange);
+  border: solid 2px var(--lightOrange);
+}
 .center-div {
   display: flex;
   justify-content: center;
@@ -180,18 +198,11 @@ input {
   align-items: center;
   padding-top: 0.2rem;
   column-gap: 0.5rem;
+  font-size: 18px;
   color: var(--primaryOrange);
   text-decoration: underline;
   cursor: pointer;
-}
-.column-card-label {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 16px;
-  left: 16px;
-  align-items: flex-start;
-  z-index: 2;
+  transition: var(--hoverAnimation);
 }
 .light-card {
   color: var(--secondaryGrey);

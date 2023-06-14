@@ -91,7 +91,7 @@ export default function ColumnChart({ ...data }: any) {
       <div className="chart-card-container">
         <div className="column-card-label">
           <div className="chart-card-title">{data.columnChart.title}</div>
-          <div className="chart-card-link">
+          <div className="app-button">
             <a href="status">View Status</a>
             <EastRoundedIcon />
           </div>

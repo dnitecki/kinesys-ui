@@ -34,7 +34,7 @@ export default function Overview(props: any) {
                 {props.data?.personal.headerText}
               </div>
               <div className="page-section-header-menu">
-                <button className="edit-goals-button">
+                <button className="app-button">
                   Edit Goals
                   <EditIcon />
                 </button>
