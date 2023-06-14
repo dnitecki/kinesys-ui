@@ -6,7 +6,6 @@ import { MultipleRadialData } from "../../../types/ChartDataType";
 import {
   barClassMapper,
   colorClassMapper,
-  radMapper,
   typeColorMapper,
 } from "../../../mappers/classMapper";
 import { trackColor } from "../../../constants/constants";
@@ -91,9 +90,7 @@ export default function MultipleRadialChart({ ...data }) {
                 (item: MultipleRadialData, index: number) => (
                   <div className="multiRad-bar" key={index}>
                     <div
-                      className={`${radMapper[data.multipleRadial.title]} ${
-                        barClassMapper[item.type]
-                      }`}
+                      className={`multiRad-bar ${barClassMapper[item.type]}`}
                     >
                       {item.label}
                     </div>
