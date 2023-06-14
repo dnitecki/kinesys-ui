@@ -7,17 +7,17 @@ import {
   barClassMapper,
   colorClassMapper,
   radMapper,
+  typeColorMapper,
 } from "../../../mappers/classMapper";
-import {
-  lightGrey,
-  primaryBlue,
-  primaryOrange,
-  trackColor,
-} from "../../../constants/constants";
+import { trackColor } from "../../../constants/constants";
 
 export default function MultipleRadialChart({ ...data }) {
   const series = data.multipleRadial.values.map(
     (element: { series: number }) => element.series
+  );
+
+  const colors = data.multipleRadial.values.map(
+    (item: { type: any }) => typeColorMapper[item.type]
   );
 
   const radialSize = (data: any) => {
@@ -32,12 +32,6 @@ export default function MultipleRadialChart({ ...data }) {
       return 250;
     }
     return 220;
-  };
-
-  const radialColor = (data: any) => {
-    if (data.multipleRadial) {
-    }
-    // todo
   };
 
   const chartOptions: ApexOptions = {
@@ -73,7 +67,7 @@ export default function MultipleRadialChart({ ...data }) {
       lineCap: "round",
     },
     fill: {
-      colors: [primaryOrange, primaryBlue, lightGrey],
+      colors: colors,
     },
   };
 
@@ -87,7 +81,7 @@ export default function MultipleRadialChart({ ...data }) {
               series={chartOptions.series}
               type="radialBar"
               height={radialHeight(data)}
-              width={200}
+              width={"100%"}
             />
           </div>
           <div className="multiRad-legend">

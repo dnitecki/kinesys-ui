@@ -1,3 +1,4 @@
+import { lightGrey, primaryBlue, primaryOrange } from "../constants/constants";
 import { Map } from "../types/CommonTypes";
 
 export const barClassMapper: Map = {
@@ -25,4 +26,10 @@ export const radMapper: Map = {
   Overview: "multiRad-bar",
   "Sales Completed": "multiRad-bar",
   Backlog: "multiRad-bar",
+};
+
+export const typeColorMapper: Map = {
+  client: primaryBlue,
+  sales: primaryOrange,
+  all: lightGrey,
 };
