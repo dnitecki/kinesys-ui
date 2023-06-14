@@ -29,7 +29,7 @@ export default function MultipleRadialChart({ ...data }) {
 
   const radialHeight = (data: any) => {
     if (data.multipleRadial.values.length > 1) {
-      return 250;
+      return 240;
     }
     return 220;
   };
