@@ -23,6 +23,7 @@ export default function ColumnChart({ ...data }: any) {
       },
       toolbar: {
         show: true,
+        offsetY: -15,
         tools: {
           download: true,
           selection: false,
@@ -100,7 +101,7 @@ export default function ColumnChart({ ...data }: any) {
             options={chartOptions}
             series={chartOptions.series}
             type="bar"
-            height={300}
+            height={275}
             width={800}
           />
         </div>

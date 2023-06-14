@@ -79,22 +79,24 @@ export default function MultipleRadialChart({ ...data }) {
           </div>
           <div className="multiRad-legend">
             <div className="chart-card-title">{data.multipleRadial.title}</div>
-            {data.multipleRadial.values.map(
-              (item: MultipleRadialData, index: number) => (
-                <div className="multiRad-bar-container" key={index}>
-                  <div
-                    className={`${radMapper[data.multipleRadial.title]} ${
-                      barClassMapper[item.type]
-                    }`}
-                  >
-                    {item.label}
+            <div className="multiRad-bars-container">
+              {data.multipleRadial.values.map(
+                (item: MultipleRadialData, index: number) => (
+                  <div className="multiRad-bar" key={index}>
+                    <div
+                      className={`${radMapper[data.multipleRadial.title]} ${
+                        barClassMapper[item.type]
+                      }`}
+                    >
+                      {item.label}
+                    </div>
+                    <div className={`${colorClassMapper[item.type]}`}>
+                      {item.series}%
+                    </div>
                   </div>
-                  <div className={`${colorClassMapper[item.type]}`}>
-                    {item.series}%
-                  </div>
-                </div>
-              )
-            )}
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>
