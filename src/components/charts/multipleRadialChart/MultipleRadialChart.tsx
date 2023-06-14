@@ -71,7 +71,7 @@ export default function MultipleRadialChart({ ...data }) {
 
   return (
     <>
-      <div className="chart-card">
+      <div className="chart-card-container">
         <div className="multiRad-container">
           <div className="multiRad-chart">
             <ReactApexChart
@@ -83,12 +83,12 @@ export default function MultipleRadialChart({ ...data }) {
             />
           </div>
           <div className="multiRad-legend">
-            <div className="chart-card-title">{data.title}</div>
+            <div className="chart-card-title">{data.multipleRadial.title}</div>
             {data.multipleRadial.values.map(
               (item: MultipleRadialData, index: number) => (
                 <div className="multiRad-bar-container" key={index}>
                   <div
-                    className={`${radMapper[data.title]} ${
+                    className={`${radMapper[data.multipleRadial.title]} ${
                       barClassMapper[item.type]
                     }`}
                   >

@@ -142,7 +142,8 @@ input {
 .page-tiles {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 2rem;
 }
 .page-skeleton {
   display: flex;
@@ -154,15 +155,17 @@ input {
 }
 .chart-card {
   display: flex;
-  min-height: 15rem;
-  position: relative;
-  flex-direction: column;
-  text-align: center;
-  padding: 1rem;
   border-radius: 10px;
-  width: fit-content;
+  width: 100%;
   border: 2px solid var(--borderCard);
   background: var(--white);
+}
+.chart-card-container {
+  display: flex;
+  min-height: 15rem;
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
 .chart-card-title {
   font-size: 24px;

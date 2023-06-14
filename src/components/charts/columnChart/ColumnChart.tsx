@@ -81,15 +81,15 @@ export default function ColumnChart({ ...data }: any) {
       show: false,
     },
     fill: {
-      colors: chartFillColorByType(data?.type),
+      colors: chartFillColorByType(data?.columnChart.type),
     },
   };
 
   return (
     <>
-      <div className="chart-card">
+      <div className="chart-card-container">
         <div className="column-card-label">
-          <div className="chart-card-title">{data.title}</div>
+          <div className="chart-card-title">{data.columnChart.title}</div>
           <div className="chart-card-link">
             <a href="status">View Status</a>
             <EastRoundedIcon />
@@ -100,7 +100,7 @@ export default function ColumnChart({ ...data }: any) {
             options={chartOptions}
             series={chartOptions.series}
             type="bar"
-            height={"180%"}
+            height={300}
             width={800}
           />
         </div>
