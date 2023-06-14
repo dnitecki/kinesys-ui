@@ -1,6 +1,4 @@
-interface Map {
-  [key: string]: string | undefined;
-}
+import { Map } from "../types/CommonTypes";
 
 export const barClassMapper: Map = {
   sales: "bar-sales",

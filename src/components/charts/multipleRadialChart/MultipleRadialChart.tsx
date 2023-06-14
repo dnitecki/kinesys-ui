@@ -24,7 +24,7 @@ export default function MultipleRadialChart({ ...data }) {
     if (data.multipleRadial.values.length > 1) {
       return "50%";
     }
-    return "60%";
+    return "70%";
   };
 
   const chartOptions: ApexOptions = {
@@ -49,11 +49,6 @@ export default function MultipleRadialChart({ ...data }) {
             offsetY: 10,
             fontSize: "30px",
             fontWeight: "bold",
-            formatter: function (val) {
-              let number = val.toString();
-              let result = parseInt(number);
-              return result.toString();
-            },
           },
           total: {
             show: false,
