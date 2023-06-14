@@ -1,5 +1,4 @@
 import React from "react";
-import ChartCard from "../../../../components/chartCard/ChartCard";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 
