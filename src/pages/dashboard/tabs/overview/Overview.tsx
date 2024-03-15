@@ -9,6 +9,7 @@ import {
   primaryOrange,
   secondaryOrange,
 } from "../../../../constants/constants";
+import BarChart from "../../../../components/charts/barChart/BarChart";
 
 export default function Overview(props: any) {
   const [year, setYear] = React.useState("2023");
@@ -90,6 +91,7 @@ export default function Overview(props: any) {
                 {props.data?.market.headerText}
               </div>
             </div>
+            <BarChart />
           </div>
         </>
       )}
