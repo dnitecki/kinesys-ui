@@ -42,7 +42,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "..", "./public/index.html"),
-      favicon: "./public/favicon.ico",
+      favicon: "./public/favicon.svg",
       manifest: "./public/manifest.json",
       filename: "index.html",
     }),
