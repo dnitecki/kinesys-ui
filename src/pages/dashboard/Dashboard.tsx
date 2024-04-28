@@ -8,7 +8,7 @@ import {
   getOverviewService,
   getStatusService,
 } from "../../services/dashboardService";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import Status from "./tabs/status/Status";
 import Overview from "./tabs/overview/Overview";
 
@@ -19,13 +19,13 @@ export default function Dashboard() {
     isLoading: isOverviewLoading,
     error: overviewError,
     data: overviewData,
-  } = useQuery(["overview"], getOverviewService);
+  } = useQuery({ queryKey: ["overview"], queryFn: getOverviewService });
 
   const {
     isLoading: isStatusLoading,
     error: statusError,
     data: statusData,
-  } = useQuery(["status"], getStatusService);
+  } = useQuery({ queryKey: ["status"], queryFn: getStatusService });
 
   return (
     <>
