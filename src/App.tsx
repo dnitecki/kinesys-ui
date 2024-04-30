@@ -1,5 +1,4 @@
 import "./App.scss";
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AppContainer from "./components/appContainer/AppContainer";
 
