@@ -1,4 +1,3 @@
-import React from "react";
 import "./SideBar.scss";
 import { NavLink } from "react-router-dom";
 import { menuItems, subMenu } from "./menuItems";
