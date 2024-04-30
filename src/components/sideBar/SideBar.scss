@@ -1,7 +1,8 @@
 .sidebar-container {
   background-color: var(--primaryGrey);
   height: 100%;
-  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
