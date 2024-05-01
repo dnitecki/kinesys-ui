@@ -12,7 +12,7 @@ export default function SideBar() {
         </div>
         <ul className="sidebar-list">
           {menuItems.map((item, index) => (
-            <li className="sidebar-item" key={index}>
+            <li className="sidebar-item" key={index} id={item.text}>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "sidebar-button-active" : "sidebar-button"
@@ -29,7 +29,7 @@ export default function SideBar() {
         </ul>
         <ul className="sidebar-list sidebar-bottom">
           {subMenu.map((item, index) => (
-            <li className="sidebar-item" key={index}>
+            <li className="sidebar-item" key={index} id={item.text}>
               <NavLink className="sidebar-button" to={item.url}>
                 <div className="sidebar-item-icon">
                   {<item.icon sx={{ fontSize: 30 }} />}
