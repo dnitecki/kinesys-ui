@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 0;
+  z-index: 1;
 }
 .sidebar-icon-container {
   display: flex;
@@ -63,7 +63,7 @@
   display: flex;
   width: 100%;
   padding: 1rem 0 1rem 0;
-  width: fit-content;
+  width: 100%;
   justify-content: center;
   border-right: transparent 3px solid;
   cursor: pointer;
@@ -90,6 +90,8 @@
 .sidebar-button:hover {
   background-color: var(--secondaryOrange);
   width: 100%;
+  display: flex;
+  padding: 1rem 0 1rem 0;
   .sidebar-item-icon {
     color: var(--primaryOrange);
   }
