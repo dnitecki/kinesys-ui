@@ -5,4 +5,5 @@ export type MenuItem = {
   text: string;
   icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
   url: string;
+  id: string;
 };

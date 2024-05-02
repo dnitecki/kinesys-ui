@@ -12,26 +12,31 @@ export const menuItems: MenuItem[] = [
     text: "Dashboard",
     icon: DashboardIcon,
     url: "dashboard",
+    id: "dashboard-button",
   },
   {
     text: "Market",
     icon: HolidayVillageIcon,
     url: "market",
+    id: "market-button",
   },
   {
     text: "Teams",
     icon: GroupsIcon,
     url: "teams",
+    id: "teams-button",
   },
   {
     text: "Catalog",
     icon: ImportContactsIcon,
     url: "catalog",
+    id: "catalog-button",
   },
   {
     text: "Tasks",
     icon: TaskIcon,
     url: "tasks",
+    id: "tasks-button",
   },
 ];
 
@@ -40,10 +45,12 @@ export const subMenu: MenuItem[] = [
     text: "Profile",
     icon: AccountCircleIcon,
     url: "profile",
+    id: "profile-button",
   },
   {
     text: "Settings",
     icon: SettingsIcon,
     url: "settings",
+    id: "settings-button",
   },
 ];
