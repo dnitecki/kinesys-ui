@@ -25,3 +25,5 @@ export const primaryGrey = getComputedStyle(
 export const lightGrey = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--lightGrey");
+
+export const EMPTY_STRING = "";

@@ -1,11 +1,30 @@
 import TextField from "@mui/material/TextField/TextField";
 import "./LoginForm.scss";
 import KinesysIcon from "../../icons/KinesysIcon.svg";
+import { useRef, useState } from "react";
+import { EMPTY_STRING } from "../../constants/constants";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const formInitialState = {
+    username: EMPTY_STRING,
+    password: EMPTY_STRING,
+    rememberMe: false,
+  };
+  const navigate = useNavigate();
+  const form = useRef();
+  const [formData, setFormData] = useState(formInitialState);
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+  const handleLogin = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <>
-      <div className="form-container">
+      <form ref={form} onSubmit={handleLogin} className="form-container">
         <div className="form-header">
           <div className="login-icon-container">
             <img className="login-icon" src={KinesysIcon} alt="Kinesys Icon" />
@@ -14,24 +33,51 @@ const LoginForm = () => {
           <h1>KINESYS</h1>
         </div>
         <h2>Sign In</h2>
-        <TextField fullWidth id="outlined-username-input" label="Username" />
+        <TextField
+          required
+          fullWidth
+          id="outlined-username-input"
+          label="Username"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
         <TextField
           fullWidth
+          required
           id="outlined-password-input"
           label="Password"
           type="password"
+          value={formData.password}
+          name="password"
+          onChange={handleChange}
           autoComplete="current-password"
         />
-        <div className="form-footer">
+        <div className="form-links">
           <div className="form-checkbox">
-            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            <input
+              type="checkbox"
+              id="rememberMe"
+              name="rememberMe"
+              onChange={handleChange}
+            />
             <label htmlFor="rememberMe">Remember Me</label>
           </div>
           <div className="forgot-password-link">
             <a>Forgot Password</a>
           </div>
         </div>
-      </div>
+        <div className="sign-in-button">
+          <button id="submit-button" type="submit">
+            <p>SIGN IN</p>
+          </button>
+        </div>
+        <hr />
+        <div className="form-footer">
+          <p>Don't have an account?</p>
+          <a>Sign up</a>
+        </div>
+      </form>
     </>
   );
 };

@@ -14,10 +14,15 @@
   h4 {
     line-height: 0%;
   }
+  hr {
+    margin-top: 2rem;
+    border: 1px solid var(--trackColor);
+    width: 100%;
+  }
   .form-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     .login-icon-container {
       display: flex;
       width: 50px;
@@ -27,7 +32,7 @@
       width: 100%;
     }
   }
-  .form-footer {
+  .form-links {
     display: flex;
     width: 100%;
     height: auto;
@@ -37,12 +42,41 @@
       input[type="checkbox"] {
         appearance: checkbox !important;
         margin-right: 0.5rem;
+        cursor: pointer;
       }
     }
     .forgot-password-link {
       display: flex;
       width: 50%;
       justify-content: flex-end;
+      color: var(--primaryOrange);
+    }
+  }
+  .sign-in-button {
+    display: flex;
+    width: 100%;
+    background-color: var(--primaryOrange);
+    border-radius: var(--buttonRadius);
+    padding: var(--buttonPadding);
+    cursor: pointer;
+    color: var(--white);
+    button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      line-height: 0%;
+    }
+  }
+  .form-footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    a {
       color: var(--primaryOrange);
     }
   }

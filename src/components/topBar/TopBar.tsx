@@ -1,4 +1,3 @@
-import React from "react";
 import "./TopBar.scss";
 import Avatar from "@mui/material/Avatar";
 import { stringAvatar } from "../../utils/helpers/helperFunctions";
