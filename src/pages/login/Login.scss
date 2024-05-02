@@ -1,3 +1,5 @@
+@import "../../Variables.scss";
+
 .login-container {
   display: flex;
   width: 100%;
@@ -20,4 +22,13 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: $sm) {
+  .login-plans {
+    display: none;
+    visibility: hidden;
+  }
+  .login-form {
+    width: 100%;
+  }
 }
