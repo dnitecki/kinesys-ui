@@ -27,3 +27,10 @@ export const lightGrey = getComputedStyle(
 ).getPropertyValue("--lightGrey");
 
 export const EMPTY_STRING = "";
+
+export const ICONS = {
+  KINESYS_ICON:
+    "https://kinesys-assets.s3.us-east-2.amazonaws.com/KinesysIcon.svg",
+  CONSTRUCTION:
+    "https://kinesys-assets.s3.us-east-2.amazonaws.com/construction-bck-img.jpg",
+};

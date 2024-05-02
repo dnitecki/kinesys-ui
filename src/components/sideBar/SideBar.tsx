@@ -1,14 +1,18 @@
 import "./SideBar.scss";
 import { NavLink } from "react-router-dom";
 import { menuItems, subMenu } from "./menuItems";
-import KinesysIcon from "../../icons/KinesysIcon.svg";
+import { ICONS } from "../../constants/constants";
 
 export default function SideBar() {
   return (
     <>
       <div className="sidebar-container">
         <div className="sidebar-icon-container">
-          <img className="sidebar-icon" src={KinesysIcon} alt="Kinesys Icon" />
+          <img
+            className="sidebar-icon"
+            src={ICONS.KINESYS_ICON}
+            alt="Kinesys Icon"
+          />
         </div>
         <ul className="sidebar-list">
           {menuItems.map((item, index) => (

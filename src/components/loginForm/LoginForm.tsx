@@ -2,7 +2,7 @@ import TextField from "@mui/material/TextField/TextField";
 import "./LoginForm.scss";
 import KinesysIcon from "../../icons/KinesysIcon.svg";
 import { useRef, useState } from "react";
-import { EMPTY_STRING } from "../../constants/constants";
+import { EMPTY_STRING, ICONS } from "../../constants/constants";
 import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
@@ -27,7 +27,11 @@ const LoginForm = () => {
       <form ref={form} onSubmit={handleLogin} className="form-container">
         <div className="form-header">
           <div className="login-icon-container">
-            <img className="login-icon" src={KinesysIcon} alt="Kinesys Icon" />
+            <img
+              className="login-icon"
+              src={ICONS.KINESYS_ICON}
+              alt="Kinesys Icon"
+            />
           </div>
           <h4>Welcome to</h4>
           <h1>KINESYS</h1>
