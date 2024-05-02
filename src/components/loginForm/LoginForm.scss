@@ -1,0 +1,75 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 4rem;
+  h1 {
+    line-height: 0%;
+    margin-top: 0.5rem;
+  }
+  h2 {
+    line-height: 0%;
+  }
+  h4 {
+    line-height: 0%;
+  }
+  .form-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    .login-icon-container {
+      display: flex;
+      width: 50px;
+    }
+    .login-icon {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .form-footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    .form-checkbox {
+      width: 50%;
+      input[type="checkbox"] {
+        appearance: checkbox !important;
+        margin-right: 0.5rem;
+      }
+    }
+    .forgot-password-link {
+      display: flex;
+      width: 50%;
+      justify-content: flex-end;
+      color: var(--primaryOrange);
+    }
+  }
+  .MuiFormLabel-root.Mui-focused {
+    color: var(--primaryOrange);
+  }
+  .MuiInputLabel-root {
+    color: var(--primaryOrange);
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .MuiInputLabel-focused {
+    color: var(--primaryOrange);
+  }
+  .MuiInputLabel-root {
+    color: var(--primaryOrange);
+  }
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-width: 2px;
+    border-color: var(--primaryOrange);
+  }
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--primaryOrange);
+    border-width: 2px;
+  }
+  .MuiSvgIcon-root {
+    color: var(--primaryOrange);
+    font-size: 35px;
+  }
+}

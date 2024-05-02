@@ -1,0 +1,17 @@
+.login-container {
+  display: flex;
+  width: 100%;
+}
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.login-plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: black;
+}
