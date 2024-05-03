@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./Dashboard.scss";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -11,9 +11,11 @@ import {
 import { useQuery } from "@tanstack/react-query";
 import Status from "./tabs/status/Status";
 import Overview from "./tabs/overview/Overview";
+import Modal from "../../components/modal/Modal";
 
 export default function Dashboard() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [showClientModal, setShowClientModal] = useState(false);
 
   const {
     isLoading: isOverviewLoading,
@@ -27,9 +29,16 @@ export default function Dashboard() {
     data: statusData,
   } = useQuery({ queryKey: ["status"], queryFn: getStatusService });
 
+  const handleModalClick = () => {
+    setShowClientModal(true);
+  };
+
   return (
     <>
-      <div className="page-container">
+      <div className="page-container" id="page-container">
+        {showClientModal ? (
+          <Modal setShowClientModal={setShowClientModal} />
+        ) : null}
         <section className="page-header">
           <Tabs
             className="page-tabs"
@@ -45,7 +54,7 @@ export default function Dashboard() {
             ))}
           </Tabs>
           <div className="page-header-buttons">
-            <button className="new-client-button">
+            <button className="new-client-button" onClick={handleModalClick}>
               <AddIcon />
               Add New Client
             </button>
