@@ -32,5 +32,5 @@ export const ICONS = {
   KINESYS_ICON:
     "https://kinesys-assets.s3.us-east-2.amazonaws.com/KinesysIcon.svg",
   CONSTRUCTION:
-    "https://kinesys-assets.s3.us-east-2.amazonaws.com/construction-bck-img.jpg",
+    "https://kinesys-assets.s3.us-east-2.amazonaws.com/construction-bck-img.png",
 };
