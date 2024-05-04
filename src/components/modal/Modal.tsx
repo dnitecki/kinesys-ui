@@ -1,14 +1,14 @@
 import "./Modal.scss";
 
-const Modal = ({ setShowClientModal }: any) => {
+const Modal = ({ setShowModal, modalContent }: any) => {
   const closeModal = () => {
-    setShowClientModal(false);
+    setShowModal(false);
   };
   return (
     <>
       <div className="modal-container" onClick={closeModal}>
         <div className="modal-content-container">
-          <h1>Modal</h1>
+          <h1>{modalContent}</h1>
         </div>
       </div>
     </>

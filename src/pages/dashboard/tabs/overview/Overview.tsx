@@ -1,4 +1,3 @@
-import React from "react";
 import ChartCard from "../../../../components/chartCard/ChartCard";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 import "./Overview.scss";
@@ -10,9 +9,10 @@ import {
   secondaryOrange,
 } from "../../../../constants/constants";
 import BarChart from "../../../../components/charts/barChart/BarChart";
+import { useState } from "react";
 
 export default function Overview(props: any) {
-  const [year, setYear] = React.useState("2023");
+  const [year, setYear] = useState("2023");
   const handleChange = (event: any) => {
     setYear(event.target.value as string);
   };

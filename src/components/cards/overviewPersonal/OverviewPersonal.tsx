@@ -1,4 +1,3 @@
-import React from "react";
 import MultipleRadialChart from "../../charts/multipleRadialChart/MultipleRadialChart";
 import ColumnChart from "../../charts/columnChart/ColumnChart";
 

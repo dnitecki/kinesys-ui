@@ -1,6 +1,5 @@
 import { ApexOptions } from "apexcharts";
-import React from "react";
-import ReactApexChart from "react-apexcharts";
+import ReactApexChart from "react-apexcharts/";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
 import "./ColumnChart.scss";

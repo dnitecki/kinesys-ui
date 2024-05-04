@@ -15,7 +15,8 @@ import Modal from "../../components/modal/Modal";
 
 export default function Dashboard() {
   const [value, setValue] = useState(0);
-  const [showClientModal, setShowClientModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
   const {
     isLoading: isOverviewLoading,
@@ -29,15 +30,16 @@ export default function Dashboard() {
     data: statusData,
   } = useQuery({ queryKey: ["status"], queryFn: getStatusService });
 
-  const handleModalClick = () => {
-    setShowClientModal(true);
+  const handleModalClick = (content: any) => {
+    setShowModal(true);
+    setModalContent(content);
   };
 
   return (
     <>
       <div className="page-container" id="page-container">
-        {showClientModal ? (
-          <Modal setShowClientModal={setShowClientModal} />
+        {showModal ? (
+          <Modal setShowModal={setShowModal} modalContent={modalContent} />
         ) : null}
         <section className="page-header">
           <Tabs
@@ -54,11 +56,17 @@ export default function Dashboard() {
             ))}
           </Tabs>
           <div className="page-header-buttons">
-            <button className="new-client-button" onClick={handleModalClick}>
+            <button
+              className="new-client-button"
+              onClick={() => handleModalClick("Client Modal")}
+            >
               <AddIcon />
               Add New Client
             </button>
-            <button className="new-estimate-button">
+            <button
+              className="new-estimate-button"
+              onClick={() => handleModalClick("Estimate Modal")}
+            >
               <AddIcon />
               Add New Estimate
             </button>

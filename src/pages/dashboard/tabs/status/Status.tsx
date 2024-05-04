@@ -1,4 +1,3 @@
-import React from "react";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import SkeletonLoader from "../../../../components/skeletonLoader/SkeletonLoader";
 

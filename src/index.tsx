@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 const queryClient = new QueryClient();
 
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <Router>
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>
     </Router>
-  </React.StrictMode>
+  </StrictMode>
 );

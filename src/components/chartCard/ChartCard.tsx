@@ -1,4 +1,3 @@
-import React from "react";
 import RadialChart from "../charts/radialChart/RadialChart";
 import "./ChartCard.scss";
 import MultipleRadialChart from "../charts/multipleRadialChart/MultipleRadialChart";

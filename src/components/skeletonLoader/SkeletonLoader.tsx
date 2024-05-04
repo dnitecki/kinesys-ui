@@ -1,4 +1,3 @@
-import React from "react";
 import Skeleton from "@mui/material/Skeleton";
 import Avatar from "@mui/material/Avatar";
 import "./SkeletonLoader.scss";
