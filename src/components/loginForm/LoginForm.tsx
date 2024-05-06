@@ -1,6 +1,5 @@
 import TextField from "@mui/material/TextField/TextField";
 import "./LoginForm.scss";
-import KinesysIcon from "../../icons/KinesysIcon.svg";
 import { useRef, useState } from "react";
 import { EMPTY_STRING, ICONS } from "../../constants/constants";
 import { useNavigate } from "react-router-dom";
