@@ -71,8 +71,8 @@ const LoginForm = () => {
             <a>Forgot Password</a>
           </div>
         </div>
-        <div className="sign-in-button">
-          <button id="submit-button" type="submit">
+        <div className="form-button">
+          <button className="sign-in-button" id="submit-button" type="submit">
             <p>SIGN IN</p>
           </button>
         </div>

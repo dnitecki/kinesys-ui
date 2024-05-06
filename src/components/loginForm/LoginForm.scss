@@ -56,6 +56,12 @@
       color: var(--primaryOrange);
     }
   }
+  .form-button {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
   .sign-in-button {
     display: flex;
     width: 100%;
@@ -64,6 +70,8 @@
     padding: var(--buttonPadding);
     cursor: pointer;
     color: var(--white);
+    justify-content: center;
+    align-items: center;
     button {
       display: flex;
       width: 100%;
@@ -88,7 +96,7 @@
     color: var(--primaryOrange);
   }
   .MuiInputLabel-root {
-    color: var(--primaryOrange);
+    color: var(--secondaryGrey);
     font-weight: bold;
     font-size: 16px;
   }
@@ -96,11 +104,11 @@
     color: var(--primaryOrange);
   }
   .MuiInputLabel-root {
-    color: var(--primaryOrange);
+    color: var(--primaryGrey);
   }
   .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-width: 2px;
-    border-color: var(--primaryOrange);
+    border-color: var(--lightGrey);
   }
   .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
     border-color: var(--primaryOrange);
