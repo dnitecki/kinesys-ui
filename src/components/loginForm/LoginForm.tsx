@@ -44,6 +44,7 @@ const LoginForm = () => {
           name="username"
           value={formData.username}
           onChange={handleChange}
+          autoComplete="username"
         />
         <TextField
           fullWidth
@@ -54,7 +55,7 @@ const LoginForm = () => {
           value={formData.password}
           name="password"
           onChange={handleChange}
-          autoComplete="current-password"
+          autoComplete="password"
         />
         <div className="form-links">
           <div className="form-checkbox">

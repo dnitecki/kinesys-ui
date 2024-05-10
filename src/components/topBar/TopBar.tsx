@@ -15,7 +15,6 @@ export default function TopBar() {
   return (
     <>
       <header className="topbar-container">
-        <div className="topbar-left"></div>
         <div className="topbar-search">
           <SearchBar />
         </div>

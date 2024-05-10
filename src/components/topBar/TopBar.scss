@@ -1,3 +1,5 @@
+@import "../../Variables.scss";
+
 .topbar-container {
   display: flex;
   background-color: var(--secondaryGrey);
@@ -49,10 +51,17 @@
 .topbar-search {
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
-.topbar-left {
-  display: flex;
-  flex: 1;
+@media screen and (max-width: $sm) {
+  .topbar-container {
+    column-gap: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .topbar-cluster-container {
+    column-gap: 1rem;
+  }
 }
