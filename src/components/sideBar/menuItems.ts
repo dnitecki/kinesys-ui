@@ -5,9 +5,9 @@ import TaskIcon from "@mui/icons-material/Task";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { MenuItem } from "../../types/MenuItem";
+import { MenuItemType } from "../../types/MenuItem";
 
-export const menuItems: MenuItem[] = [
+export const menuItems: MenuItemType[] = [
   {
     text: "Dashboard",
     icon: DashboardIcon,
@@ -40,7 +40,7 @@ export const menuItems: MenuItem[] = [
   },
 ];
 
-export const subMenu: MenuItem[] = [
+export const subMenu: MenuItemType[] = [
   {
     text: "Profile",
     icon: AccountCircleIcon,

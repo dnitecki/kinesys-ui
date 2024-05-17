@@ -1,6 +1,6 @@
-import { TabItem } from "../../types/TabItem";
+import { TabItemType } from "../../types/TabItem";
 
-export const tabItems: TabItem[] = [
+export const tabItems: TabItemType[] = [
   {
     text: "Overview",
   },

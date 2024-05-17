@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import "./Dashboard.scss";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -12,11 +12,12 @@ import { useQuery } from "@tanstack/react-query";
 import Status from "./tabs/status/Status";
 import Overview from "./tabs/overview/Overview";
 import Modal from "../../components/modal/Modal";
+import { FormEnums } from "../../enums/FormEnums";
 
 export default function Dashboard() {
-  const [value, setValue] = useState(0);
-  const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState(null);
+  const [value, setValue] = useState<number>(0);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [modalContent, setModalContent] = useState<string | null>(null);
 
   const {
     isLoading: isOverviewLoading,
@@ -30,7 +31,7 @@ export default function Dashboard() {
     data: statusData,
   } = useQuery({ queryKey: ["status"], queryFn: getStatusService });
 
-  const handleModalClick = (content: any) => {
+  const handleModalClick = (content: FormEnums) => {
     setShowModal(true);
     setModalContent(content);
   };
@@ -39,7 +40,7 @@ export default function Dashboard() {
     <>
       <div className="page-container" id="page-container">
         {showModal ? (
-          <Modal setShowModal={setShowModal} modalContent={modalContent} />
+          <Modal setShowModal={setShowModal} ContentType={modalContent} />
         ) : null}
         <section className="page-header">
           <Tabs
@@ -47,7 +48,7 @@ export default function Dashboard() {
             value={value}
             textColor="primary"
             indicatorColor="primary"
-            onChange={(event, newValue) => {
+            onChange={(e, newValue) => {
               setValue(newValue);
             }}
           >
@@ -58,14 +59,14 @@ export default function Dashboard() {
           <div className="page-header-buttons">
             <button
               className="new-client-button"
-              onClick={() => handleModalClick("Client Modal")}
+              onClick={() => handleModalClick(FormEnums.NewClientForm)}
             >
               <AddIcon />
               Add New Client
             </button>
             <button
               className="new-estimate-button"
-              onClick={() => handleModalClick("Estimate Modal")}
+              onClick={() => handleModalClick(FormEnums.NewEstimateForm)}
             >
               <AddIcon />
               Add New Estimate

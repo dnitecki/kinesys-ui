@@ -23,7 +23,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form ref={form} onSubmit={handleLogin} className="form-container">
+      <form ref={form} onSubmit={handleLogin} className="login-form-container">
         <div className="form-header">
           <div className="login-icon-container">
             <img
