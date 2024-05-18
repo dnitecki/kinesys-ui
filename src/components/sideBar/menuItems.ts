@@ -5,7 +5,7 @@ import TaskIcon from "@mui/icons-material/Task";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { MenuItemType } from "../../types/MenuItem";
+import { MenuItemType } from "../../types/MenuItemTypes";
 
 export const menuItems: MenuItemType[] = [
   {

@@ -1,4 +1,4 @@
-import { TabItemType } from "../../types/TabItem";
+import { TabItemType } from "../../types/TabItemTypes";
 
 export const tabItems: TabItemType[] = [
   {

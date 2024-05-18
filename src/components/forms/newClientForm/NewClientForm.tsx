@@ -5,7 +5,7 @@ export const NewClientForm = () => {
   return (
     <div className="new-client-form-container">
       <form className="form-container">
-        <div className="first-row">
+        <div className="form-row">
           <TextField
             required
             fullWidth
@@ -21,7 +21,7 @@ export const NewClientForm = () => {
             autoComplete="last-name"
           />
         </div>
-        <div className="second-row">
+        <div className="form-row">
           <TextField
             required
             fullWidth
@@ -37,6 +37,15 @@ export const NewClientForm = () => {
             autoComplete="phone-number"
             placeholder="(000) 000-0000"
             multiline
+          />
+        </div>
+        <div className="form-row">
+          <TextField
+            fullWidth
+            required
+            label="Address"
+            name="address"
+            autoComplete="address"
           />
         </div>
       </form>

@@ -1,4 +1,5 @@
-import { NewClientForm } from "../components/newClientForm/NewClientForm";
+import { NewClientForm } from "../components/forms/newClientForm/NewClientForm";
+import { NewEstimateForm } from "../components/forms/newEstimateForm/NewEstimateForm";
 import { ModalContentEnums } from "../enums/FormEnums";
 import { ModalContentMapperType } from "../types/ModalTypes";
 
@@ -9,6 +10,6 @@ export const ModalContentMapper: ModalContentMapperType = {
   },
   [ModalContentEnums.NewEstimateForm]: {
     headerText: "Create New Estimate",
-    Component: NewClientForm,
+    Component: NewEstimateForm,
   },
 };
