@@ -56,7 +56,7 @@ export const NewClientForm = () => {
         </div>
         <div className="form-row">
           <FormControl variant="outlined" fullWidth required>
-            <InputLabel className="custom-label">State</InputLabel>
+            <InputLabel>State</InputLabel>
             <Select
               className="custom-select"
               fullWidth
@@ -71,6 +71,12 @@ export const NewClientForm = () => {
               ))}
             </Select>
           </FormControl>
+          <TextField
+            fullWidth
+            label="Zip Code"
+            name="zipCode"
+            autoComplete="zip-code"
+          />
         </div>
       </form>
     </div>
