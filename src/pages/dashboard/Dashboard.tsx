@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import "./Dashboard.scss";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
