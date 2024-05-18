@@ -4,6 +4,8 @@ import "./NewClientForm.scss";
 import MenuItem from "@mui/material/MenuItem";
 import { STATES } from "../../../constants/constants";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import FormControl from "@mui/material/FormControl/FormControl";
+import InputLabel from "@mui/material/InputLabel/InputLabel";
 
 export const NewClientForm = () => {
   return (
@@ -53,18 +55,22 @@ export const NewClientForm = () => {
           />
         </div>
         <div className="form-row">
-          <Select
-            fullWidth
-            required
-            label="State"
-            name="state"
-            variant="outlined"
-            IconComponent={ExpandMoreIcon}
-          >
-            {STATES.stateList.map((state) => (
-              <MenuItem key={state.abbreviation}>{state.name}</MenuItem>
-            ))}
-          </Select>
+          <FormControl variant="outlined" fullWidth required>
+            <InputLabel className="custom-label">State</InputLabel>
+            <Select
+              className="custom-select"
+              fullWidth
+              label="State"
+              name="state"
+              IconComponent={ExpandMoreIcon}
+            >
+              {STATES.stateList.map((state) => (
+                <MenuItem key={state.abbreviation} value={state.name}>
+                  {state.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
         </div>
       </form>
     </div>

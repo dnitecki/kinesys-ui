@@ -30,6 +30,21 @@
     color: var(--primaryOrange);
     font-size: 35px;
   }
+  .custom-select {
+    .MuiSelect-root {
+      color: black;
+    }
+    .MuiSelect-icon {
+      color: var(--lightGrey);
+    }
+    .MuiSelect-outlined {
+      color: black;
+    }
+    .MuiSelect-root.Mui-focused {
+      color: var(--primaryOrange);
+    }
+  }
+
   .form-container {
     display: flex;
     width: 100%;
