@@ -5,5 +5,8 @@ export type ModalProps = {
   setShowModal: Dispatch<SetStateAction<boolean>>;
 };
 export type ModalContentMapperType = {
-  [key: string]: FC;
+  [key: string]: {
+    headerText: string;
+    Component: FC;
+  };
 };

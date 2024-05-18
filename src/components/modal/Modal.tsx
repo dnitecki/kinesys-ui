@@ -8,7 +8,7 @@ const Modal: React.FC<ModalProps> = ({ ModalContentType, setShowModal }) => {
     setShowModal(false);
   };
 
-  const ModalContent = ModalContentMapper[ModalContentType];
+  const { Component, headerText } = ModalContentMapper[ModalContentType];
 
   return (
     <>
@@ -16,14 +16,14 @@ const Modal: React.FC<ModalProps> = ({ ModalContentType, setShowModal }) => {
         <div className="modal-content-container">
           <header className="modal-header">
             <div className="header-title">
-              <h2>Header Title</h2>
+              <h2>{headerText}</h2>
             </div>
             <div className="header-close" onClick={closeModal}>
               <CloseIcon />
             </div>
           </header>
           <div className="modal-content">
-            <ModalContent />
+            <Component />
           </div>
         </div>
       </div>
