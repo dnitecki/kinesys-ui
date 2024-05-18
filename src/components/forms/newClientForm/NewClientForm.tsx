@@ -1,5 +1,9 @@
 import TextField from "@mui/material/TextField/TextField";
+import Select from "@mui/material/Select";
 import "./NewClientForm.scss";
+import MenuItem from "@mui/material/MenuItem";
+import { STATES } from "../../../constants/constants";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const NewClientForm = () => {
   return (
@@ -47,6 +51,20 @@ export const NewClientForm = () => {
             name="address"
             autoComplete="address"
           />
+        </div>
+        <div className="form-row">
+          <Select
+            fullWidth
+            required
+            label="State"
+            name="state"
+            variant="outlined"
+            IconComponent={ExpandMoreIcon}
+          >
+            {STATES.stateList.map((state) => (
+              <MenuItem key={state.abbreviation}>{state.name}</MenuItem>
+            ))}
+          </Select>
         </div>
       </form>
     </div>
