@@ -4,25 +4,41 @@ import "./NewClientForm.scss";
 export const NewClientForm = () => {
   return (
     <div className="new-client-form-container">
-      <header className="modal-header">header</header>
       <form className="form-container">
-        <TextField
-          required
-          fullWidth
-          id="outlined-username-input"
-          label="Username"
-          name="username"
-          autoComplete="username"
-        />
-        <TextField
-          fullWidth
-          required
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          name="password"
-          autoComplete="password"
-        />
+        <div className="first-row">
+          <TextField
+            required
+            fullWidth
+            label="First Name"
+            name="firstName"
+            autoComplete="first-name"
+          />
+          <TextField
+            fullWidth
+            required
+            label="Last Name"
+            name="lastName"
+            autoComplete="last-name"
+          />
+        </div>
+        <div className="second-row">
+          <TextField
+            required
+            fullWidth
+            label="Email"
+            name="email"
+            autoComplete="email"
+          />
+          <TextField
+            fullWidth
+            required
+            label="Phone Number"
+            name="phoneNumber"
+            autoComplete="phone-number"
+            placeholder="(000) 000-0000"
+            multiline
+          />
+        </div>
       </form>
     </div>
   );

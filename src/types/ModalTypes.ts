@@ -1,6 +1,9 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 
 export type ModalProps = {
-  ContentType: string | null;
+  ModalContentType: string | null;
   setShowModal: Dispatch<SetStateAction<boolean>>;
+};
+export type ModalContentMapperType = {
+  [key: string]: FC;
 };

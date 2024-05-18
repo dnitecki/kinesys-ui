@@ -12,7 +12,7 @@ import { useQuery } from "@tanstack/react-query";
 import Status from "./tabs/status/Status";
 import Overview from "./tabs/overview/Overview";
 import Modal from "../../components/modal/Modal";
-import { FormEnums } from "../../enums/FormEnums";
+import { ModalContentEnums } from "../../enums/FormEnums";
 
 export default function Dashboard() {
   const [value, setValue] = useState<number>(0);
@@ -31,7 +31,7 @@ export default function Dashboard() {
     data: statusData,
   } = useQuery({ queryKey: ["status"], queryFn: getStatusService });
 
-  const handleModalClick = (content: FormEnums) => {
+  const handleModalClick = (content: ModalContentEnums) => {
     setShowModal(true);
     setModalContent(content);
   };
@@ -40,7 +40,7 @@ export default function Dashboard() {
     <>
       <div className="page-container" id="page-container">
         {showModal ? (
-          <Modal setShowModal={setShowModal} ContentType={modalContent} />
+          <Modal setShowModal={setShowModal} ModalContentType={modalContent} />
         ) : null}
         <section className="page-header">
           <Tabs
@@ -59,14 +59,16 @@ export default function Dashboard() {
           <div className="page-header-buttons">
             <button
               className="new-client-button"
-              onClick={() => handleModalClick(FormEnums.NewClientForm)}
+              onClick={() => handleModalClick(ModalContentEnums.NewClientForm)}
             >
               <AddIcon />
               Add New Client
             </button>
             <button
               className="new-estimate-button"
-              onClick={() => handleModalClick(FormEnums.NewEstimateForm)}
+              onClick={() =>
+                handleModalClick(ModalContentEnums.NewEstimateForm)
+              }
             >
               <AddIcon />
               Add New Estimate

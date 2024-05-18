@@ -1,4 +1,4 @@
-export enum FormEnums {
+export enum ModalContentEnums {
   NewClientForm = "NewClientForm",
   NewEstimateForm = "NewEstimateForm",
 }

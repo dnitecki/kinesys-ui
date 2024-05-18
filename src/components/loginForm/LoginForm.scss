@@ -109,6 +109,7 @@
   .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
     border-width: 2px;
     border-color: var(--primaryGrey);
+    font-weight: 300;
   }
   .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
     border-color: var(--primaryOrange);
