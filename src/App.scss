@@ -19,7 +19,7 @@
   --shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
   --topBarHeight: 5rem;
   --hoverAnimation: all 175ms ease-in-out;
-  --buttonPadding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  --buttonPadding: 0.4rem 0.7rem 0.4rem 0.7rem;
   --buttonRadius: 5px;
   --border: 2px solid var(--borderCard);
 }
@@ -89,7 +89,7 @@ input {
   display: flex;
   font-size: 16px;
   color: var(--primaryOrange);
-  font-weight: bold;
+  font-weight: 500;
   justify-content: center;
   align-items: center;
   column-gap: 0.5rem;

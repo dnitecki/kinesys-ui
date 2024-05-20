@@ -56,4 +56,21 @@
     width: 100%;
     gap: 1rem;
   }
+  .btn-row {
+    justify-content: flex-end;
+  }
+  .submit-button {
+    display: flex;
+    border-radius: var(--buttonRadius);
+    font-size: 16px;
+    background: var(--primaryOrange);
+    color: var(--white);
+    font-weight: 500;
+    height: fit-content;
+    border: solid 2px var(--primaryOrange);
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.2rem;
+    padding: var(--buttonPadding);
+  }
 }
