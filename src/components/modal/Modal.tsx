@@ -18,9 +18,9 @@ const Modal: React.FC<ModalProps> = ({ ModalContentType, setShowModal }) => {
             <div className="header-title">
               <h2>{headerText}</h2>
             </div>
-            <div className="header-close" onClick={closeModal}>
+            <button className="header-close" onClick={closeModal}>
               <CloseIcon />
-            </div>
+            </button>
           </header>
           <div className="modal-content">
             <Component />
