@@ -78,7 +78,7 @@ export const NewClientForm = () => {
             autoComplete="zip-code"
           />
         </div>
-        <div className="form-row btn-row">
+        <div className="form-row button-row">
           <button className="app-button">Save</button>
           <button className="submit-button">Save & Submit</button>
         </div>
