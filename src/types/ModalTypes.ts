@@ -1,4 +1,5 @@
 import { Dispatch, FC, SetStateAction } from "react";
+import { FormPropsType } from "./FormTypes";
 
 export type ModalProps = {
   ModalContentType: string | null;
@@ -7,6 +8,6 @@ export type ModalProps = {
 export type ModalContentMapperType = {
   [key: string]: {
     headerText: string;
-    Component: FC;
+    Component: FC<FormPropsType>;
   };
 };

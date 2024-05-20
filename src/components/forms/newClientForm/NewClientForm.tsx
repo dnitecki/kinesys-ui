@@ -6,11 +6,12 @@ import { STATES } from "../../../constants/constants";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FormControl from "@mui/material/FormControl/FormControl";
 import InputLabel from "@mui/material/InputLabel/InputLabel";
+import { FormPropsType } from "../../../types/FormTypes";
 
-export const NewClientForm = () => {
+export const NewClientForm: React.FC<FormPropsType> = ({ onClose }) => {
   return (
     <div className="new-client-form-container">
-      <form className="form-container">
+      <form className="form-container" onSubmit={onClose}>
         <div className="form-row">
           <TextField
             required
@@ -80,7 +81,9 @@ export const NewClientForm = () => {
         </div>
         <div className="form-row button-row">
           <button className="app-button">Save</button>
-          <button className="submit-button">Save & Submit</button>
+          <button className="submit-button" type="submit">
+            Save & Submit
+          </button>
         </div>
       </form>
     </div>
