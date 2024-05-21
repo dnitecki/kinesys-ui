@@ -1,5 +1,5 @@
 import LoginForm from "../../components/forms/loginForm/LoginForm";
-import { ICONS } from "../../constants/constants";
+import { ICONS } from "../../constants/content";
 import "./Login.scss";
 
 export default function Login() {

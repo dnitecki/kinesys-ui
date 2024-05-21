@@ -1,7 +1,7 @@
 import TextField from "@mui/material/TextField/TextField";
 import "./LoginForm.scss";
 import { useRef, useState } from "react";
-import { EMPTY_STRING, ICONS } from "../../../constants/constants";
+import { EMPTY_STRING, ICONS } from "../../../constants/content";
 import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {

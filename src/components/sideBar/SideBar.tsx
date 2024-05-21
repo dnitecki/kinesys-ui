@@ -1,7 +1,7 @@
 import "./SideBar.scss";
 import { NavLink } from "react-router-dom";
 import { menuItems, subMenu } from "./menuItems";
-import { ICONS } from "../../constants/constants";
+import { ICONS } from "../../constants/content";
 
 export default function SideBar() {
   return (
