@@ -1,5 +1,16 @@
 export const EMPTY_STRING = "";
 
+export const DOCUMENT_TITLE = {
+  SIGN_IN: "Kinesys | Sign-In",
+  DASHBOARD: "Kinesys | Dashboard",
+  MARKET: "Kinesys | Market",
+  TEAMS: "Kinesys | Teams",
+  CATALOG: "Kinesys | Catalog",
+  TASKS: "Kinesys | Tasks",
+  PROFILE: "Kinesys | Profile",
+  SETTINGS: "Kinesys | Settings",
+};
+
 export const ICONS = {
   KINESYS_ICON:
     "https://kinesys-assets.s3.us-east-2.amazonaws.com/KinesysIcon.svg",

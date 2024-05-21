@@ -1,8 +1,10 @@
 import LoginForm from "../../components/forms/loginForm/LoginForm";
-import { ICONS } from "../../constants/content";
+import { DOCUMENT_TITLE, ICONS } from "../../constants/content";
 import "./Login.scss";
 
 export default function Login() {
+  document.title = DOCUMENT_TITLE.SIGN_IN;
+
   return (
     <>
       <div className="login-container">

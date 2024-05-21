@@ -9,8 +9,11 @@ function App() {
       <div className="app">
         <div className="app-container">
           <Routes>
-            <Route path="login" element={<Login />} />
-            <Route path="/" element={<Navigate to="login" replace={true} />} />
+            <Route path="sign-in" element={<Login />} />
+            <Route
+              path="/"
+              element={<Navigate to="sign-in" replace={true} />}
+            />
             <Route path="/*" element={<AppContainer />} />
           </Routes>
         </div>

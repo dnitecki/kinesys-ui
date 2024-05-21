@@ -13,11 +13,13 @@ import Status from "./tabs/status/Status";
 import Overview from "./tabs/overview/Overview";
 import Modal from "../../components/modal/Modal";
 import { ModalContentEnums } from "../../enums/FormEnums";
+import { DOCUMENT_TITLE } from "../../constants/content";
 
 export default function Dashboard() {
   const [value, setValue] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [modalContent, setModalContent] = useState<string | null>(null);
+  document.title = DOCUMENT_TITLE.DASHBOARD;
 
   const {
     isLoading: isOverviewLoading,
