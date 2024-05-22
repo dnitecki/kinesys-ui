@@ -10,6 +10,11 @@ import {
 } from "../../../../constants/constants";
 import BarChart from "../../../../components/charts/barChart/BarChart";
 import { useState } from "react";
+import { overviewMapper } from "../../../../mappers/overviewMapper";
+import {
+  Chart,
+  Section,
+} from "../../../../types/mapperTypes/overviewMapperTypes";
 
 export default function Overview(props: any) {
   const [year, setYear] = useState("2023");
@@ -77,21 +82,15 @@ export default function Overview(props: any) {
                 </div>
               </div>
             </div>
-            {props.data?.personal.response[year].map(
-              (row: any, index: number) => (
-                <section className="page-tiles" key={index}>
-                  {row.data.map((item: any, index: number) => (
-                    <ChartCard {...item} key={index} />
-                  ))}
-                </section>
-              )
-            )}
-            <div className="page-section-header">
-              <div className="page-section-header-text">
-                {props.data?.market.headerText}
-              </div>
-            </div>
-            <BarChart />
+            {overviewMapper.sections.map((section: Section, index: number) => (
+              <section className="page-tiles" key={index}>
+                {section.charts.map((chart: Chart, index: number) => (
+                  <li className="chart-card">
+                    <chart.Component key={index} />
+                  </li>
+                ))}
+              </section>
+            ))}
           </div>
         </>
       )}

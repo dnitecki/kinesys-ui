@@ -9,24 +9,34 @@ import {
 } from "../../../mappers/classMapper";
 import { trackColor } from "../../../constants/constants";
 
-export default function MultipleRadialChart({ ...data }) {
-  const series = data.multipleRadial.values.map(
+export default function MultipleRadialChart() {
+  const data = {
+    title: "Sales Completed",
+    values: [
+      {
+        series: 89,
+        label: "$12,250,000",
+        type: "sales",
+      },
+    ],
+  };
+  const series = data.values.map(
     (element: { series: number }) => element.series
   );
 
-  const colors = data.multipleRadial.values.map(
+  const colors = data.values.map(
     (item: { type: string }) => typeColorMapper[item.type]
   );
 
   const radialSize = (data: any) => {
-    if (data.multipleRadial.values.length > 1) {
+    if (data.values.length > 1) {
       return "50%";
     }
     return "70%";
   };
 
   const radialHeight = (data: any) => {
-    if (data.multipleRadial.values.length > 1) {
+    if (data.values.length > 1) {
       return 240;
     }
     return 220;
@@ -83,22 +93,18 @@ export default function MultipleRadialChart({ ...data }) {
             />
           </div>
           <div className="multiRad-legend">
-            <div className="chart-card-title">{data.multipleRadial.title}</div>
+            <div className="chart-card-title">{data.title}</div>
             <div className="multiRad-bars-container">
-              {data.multipleRadial.values.map(
-                (item: MultipleRadialData, index: number) => (
-                  <div className="multiRad-bar" key={index}>
-                    <div
-                      className={`multiRad-bar ${barClassMapper[item.type]}`}
-                    >
-                      {item.label}
-                    </div>
-                    <div className={`${colorClassMapper[item.type]}`}>
-                      {item.series}%
-                    </div>
+              {data.values.map((item: MultipleRadialData, index: number) => (
+                <div className="multiRad-bar" key={index}>
+                  <div className={`multiRad-bar ${barClassMapper[item.type]}`}>
+                    {item.label}
                   </div>
-                )
-              )}
+                  <div className={`${colorClassMapper[item.type]}`}>
+                    {item.series}%
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

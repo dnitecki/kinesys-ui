@@ -5,8 +5,25 @@ import { chartFillColorByType } from "../../../utils/helpers/helperFunctions";
 import "./ColumnChart.scss";
 
 export default function ColumnChart({ ...data }: any) {
-  const response = data.columnChart.values;
-  const series = response.map((item: any) => {
+  const response = {
+    title: "Monthly",
+    type: "client",
+    values: [
+      {
+        series: [44, 55, 57, 56, 61, 58, 63, 60, 66, 61, 66, 59],
+        label: "Sales",
+      },
+      {
+        series: [100, 98, 84, 100, 85, 77, 102, 87, 76, 82, 85, 99],
+        label: "Clients",
+      },
+      {
+        series: [35, 41, 36, 26, 45, 48, 52, 53, 41, 63, 60, 66],
+        label: "Goal",
+      },
+    ],
+  };
+  const series = response.values.map((item: any) => {
     return {
       name: item.label,
       data: item.series,
@@ -81,7 +98,7 @@ export default function ColumnChart({ ...data }: any) {
       show: false,
     },
     fill: {
-      colors: chartFillColorByType(data?.columnChart.type),
+      colors: chartFillColorByType(data?.type),
     },
   };
 
@@ -89,7 +106,7 @@ export default function ColumnChart({ ...data }: any) {
     <>
       <div className="chart-card-container">
         <div className="column-card-label">
-          <div className="chart-card-title">{data.columnChart.title}</div>
+          <div className="chart-card-title">{data.title}</div>
           <div className="app-button">
             <button>View Status</button>
             <EastRoundedIcon />
