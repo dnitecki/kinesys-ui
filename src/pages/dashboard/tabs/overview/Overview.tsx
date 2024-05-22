@@ -7,7 +7,6 @@ import {
   primaryOrange,
   secondaryOrange,
 } from "../../../../constants/constants";
-import BarChart from "../../../../components/charts/barChart/BarChart";
 import { useState } from "react";
 import { overviewMapper } from "../../../../mappers/overviewMapper";
 import {
