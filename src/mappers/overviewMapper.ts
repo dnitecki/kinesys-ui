@@ -29,5 +29,33 @@ export const overviewMapper: OverviewMapper = {
         },
       ],
     },
+    {
+      headerText: "Organizational Goals",
+      charts: [
+        {
+          Component: MultipleRadialChart,
+        },
+        {
+          Component: MultipleRadialChart,
+        },
+        {
+          Component: MultipleRadialChart,
+        },
+      ],
+    },
+    {
+      headerText: "Your Goals",
+      charts: [
+        {
+          Component: MultipleRadialChart,
+        },
+        {
+          Component: MultipleRadialChart,
+        },
+        {
+          Component: MultipleRadialChart,
+        },
+      ],
+    },
   ],
 };
