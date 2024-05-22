@@ -140,7 +140,7 @@ input {
 }
 .page-section-header-text {
   display: flex;
-  height: 100%;
+  height: fit-content;
   color: var(--secondaryGrey);
   flex-direction: column;
   justify-content: flex-end;

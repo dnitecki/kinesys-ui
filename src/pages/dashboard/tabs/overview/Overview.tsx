@@ -36,9 +36,6 @@ export default function Overview(props: any) {
         <>
           <div className="page-tiles-container">
             <div className="page-section-header">
-              <div className="page-section-header-text">
-                {props.data?.personal.headerText}
-              </div>
               <div className="page-section-header-menu">
                 <button className="app-button">
                   Edit Goals
@@ -83,13 +80,18 @@ export default function Overview(props: any) {
               </div>
             </div>
             {overviewMapper.sections.map((section: Section, index: number) => (
-              <section className="page-tiles" key={index}>
-                {section.charts.map((chart: Chart, index: number) => (
-                  <li className="chart-card">
-                    <chart.Component key={index} />
-                  </li>
-                ))}
-              </section>
+              <>
+                <div className="page-section-header-text">
+                  {section.headerText}
+                </div>
+                <section className="page-tiles" key={index}>
+                  {section.charts.map((chart: Chart, index: number) => (
+                    <div className="chart-card">
+                      <chart.Component key={index} />
+                    </div>
+                  ))}
+                </section>
+              </>
             ))}
           </div>
         </>
