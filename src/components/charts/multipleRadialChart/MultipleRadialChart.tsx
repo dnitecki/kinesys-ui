@@ -1,7 +1,10 @@
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import "./MultipleRadialChart.scss";
-import { MultipleRadialData } from "../../../types/ChartDataType";
+import {
+  ChartPropsType,
+  MultipleRadialData,
+} from "../../../types/ChartDataTypes";
 import {
   barClassMapper,
   colorClassMapper,
@@ -9,7 +12,7 @@ import {
 } from "../../../mappers/classMapper";
 import { trackColor } from "../../../constants/constants";
 
-export default function MultipleRadialChart() {
+export default function MultipleRadialChart({ ...props }: ChartPropsType) {
   const data = {
     title: "Sales Completed",
     values: [

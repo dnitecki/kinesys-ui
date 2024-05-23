@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { ChartPropsType } from "../ChartDataTypes";
 
 export type OverviewMapper = {
   sections: Section[];
@@ -10,5 +11,5 @@ export type Section = {
 };
 
 export type Chart = {
-  Component: FC;
+  Component: FC<ChartPropsType>;
 };
