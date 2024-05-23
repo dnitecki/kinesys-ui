@@ -1,5 +1,7 @@
+import { OverviewDataType } from "./responseTypes/OverviewResponseTypes";
+
 export type ChartDataType = {
-  data: {};
+  [key: string]: {};
 };
 
 export type BarChartData = {
@@ -14,5 +16,5 @@ export type MultipleRadialData = {
 };
 
 export type ChartPropsType = {
-  data?: ChartDataType;
+  chartData: ChartDataType;
 };

@@ -12,7 +12,8 @@ import {
 } from "../../../mappers/classMapper";
 import { trackColor } from "../../../constants/constants";
 
-export default function MultipleRadialChart({ ...props }: ChartPropsType) {
+const MultipleRadialChart: React.FC<ChartPropsType> = ({ chartData }) => {
+  console.log(chartData);
   const data = {
     title: "Sales Completed",
     values: [
@@ -114,4 +115,5 @@ export default function MultipleRadialChart({ ...props }: ChartPropsType) {
       </div>
     </>
   );
-}
+};
+export default MultipleRadialChart;

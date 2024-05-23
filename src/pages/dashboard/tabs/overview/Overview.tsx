@@ -13,15 +13,24 @@ import {
   Chart,
   Section,
 } from "../../../../types/mapperTypes/overviewMapperTypes";
+import { OverviewResponseType } from "../../../../types/responseTypes/OverviewResponseTypes";
+import { ChartPropsType } from "../../../../types/ChartDataTypes";
 
 export default function Overview(props: any) {
   const [year, setYear] = useState("2023");
   const handleChange = (event: any) => {
     setYear(event.target.value as string);
   };
-  const yearRange: string[] = Object.keys(props.data?.personal.response || {})
-    .sort()
-    .reverse();
+
+  const getYearRange = (data: OverviewResponseType) => {
+    let yearRange = [];
+    yearRange = data ? Object.keys(data) : [];
+    return yearRange.sort().reverse();
+  };
+
+  const chartProps: ChartPropsType = {
+    chartData: props?.data?.response[year],
+  };
 
   return (
     <>
@@ -67,11 +76,13 @@ export default function Overview(props: any) {
                         },
                       }}
                     >
-                      {yearRange?.map((year: string, index: number) => (
-                        <MenuItem value={year} key={index}>
-                          {year}
-                        </MenuItem>
-                      ))}
+                      {getYearRange(props?.data?.response).map(
+                        (year: string, index: number) => (
+                          <MenuItem value={year} key={index}>
+                            {year}
+                          </MenuItem>
+                        )
+                      )}
                     </Select>
                   </FormControl>
                 </div>
@@ -79,13 +90,16 @@ export default function Overview(props: any) {
             </div>
             {overviewMapper.sections.map((section: Section, index: number) => (
               <>
-                <div className="page-section-header-text">
-                  {section.headerText}
+                <div
+                  className="page-section-header-text"
+                  key={section.headerText}
+                >
+                  <div>{section.headerText}</div>
                 </div>
                 <section className="page-tiles" key={index}>
                   {section.charts.map((chart: Chart, index: number) => (
                     <div className="chart-card">
-                      <chart.Component key={index} />
+                      <chart.Component key={index} chartData={chartProps} />
                     </div>
                   ))}
                 </section>

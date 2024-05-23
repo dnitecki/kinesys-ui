@@ -1,28 +1,24 @@
 {
-  "response": [
-    {
-      "2023": {
-        "data": {
-          "totalRevenue": 13700000,
-          "totalYearlySales": 12200000,
-          "pipeline": 250000,
-          "revenueGoal": 1200000000,
-          "pieplineGoal": 120000000,
-          "salesGoal": 120000000
-        }
+  "response": {
+    "2023": {
+      "data": {
+        "totalRevenue": 13700000,
+        "totalYearlySales": 12200000,
+        "pipeline": 250000,
+        "revenueGoal": 1200000000,
+        "pipelineGoal": 120000000,
+        "salesGoal": 120000000
       }
     },
-    {
-      "2022": {
-        "data": {
-          "totalRevenue": 13700000,
-          "totalYearlySales": 12200000,
-          "pipeline": 250000,
-          "revenueGoal": 1200000000,
-          "pieplineGoal": 120000000,
-          "salesGoal": 120000000
-        }
+    "2022": {
+      "data": {
+        "totalRevenue": 13700000,
+        "totalYearlySales": 12200000,
+        "pipeline": 250000,
+        "revenueGoal": 1200000000,
+        "pipelineGoal": 120000000,
+        "salesGoal": 120000000
       }
     }
-  ]
+  }
 }
